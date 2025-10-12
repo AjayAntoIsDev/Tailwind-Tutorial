@@ -9,7 +9,20 @@
         <link rel="stylesheet" href="css/prism.css">
         <style>
             .section {
-                margin-bottom: 3rem;
+                margin-bottom: 4rem;
+            }
+            
+            .section::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 2px;
+                background: linear-gradient(to right, transparent, #e5e7eb, transparent);
+                margin-top: 3rem;
+            }
+            
+            .section:last-of-type::after {
+                display: none;
             }
             
             pre[class*="language-"] {
@@ -42,57 +55,286 @@
 
             <!-- HTML Tags Recap -->
             <section class="section bg-white p-8 rounded-lg shadow-md">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6">HTML Tags - Quick Recap </h2>
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">HTML Tags - Quick Recap 📌</h2>
 
-                <div class="space-y-4">
+                <div class="space-y-6">
                     <div class="border-l-4 border-green-500 pl-4">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">&lt;div&gt; - Division/Container</h3>
-                        <p class="text-gray-600">Used to group and organize content. It's a block-level element.</p>
+                        <p class="text-gray-600 mb-3">Used to group and organize content. It's a block-level element.</p>
                         <pre><code class="language-html">&lt;div&gt;This is a container&lt;/div&gt;</code></pre>
+                        <div class="bg-gray-100 p-4 rounded-lg mt-3 border border-gray-300">
+                            <p class="text-sm text-gray-600 mb-2"><strong>Result:</strong></p>
+                            <div class="bg-white p-3 border-2 border-blue-200 rounded">This is a container</div>
+                        </div>
                     </div>
 
                     <div class="border-l-4 border-green-500 pl-4">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">&lt;h1&gt; to &lt;h6&gt; - Headings</h3>
-                        <p class="text-gray-600">Heading tags from largest (h1) to smallest (h6).</p>
+                        <p class="text-gray-600 mb-3">Heading tags from largest (h1) to smallest (h6).</p>
                         <pre><code class="language-html">&lt;h1&gt;Main Heading&lt;/h1&gt;
 &lt;h2&gt;Sub Heading&lt;/h2&gt;</code></pre>
+                        <div class="bg-gray-100 p-4 rounded-lg mt-3 border border-gray-300">
+                            <p class="text-sm text-gray-600 mb-2"><strong>Result:</strong></p>
+                            <h1 class="text-4xl font-bold">Main Heading</h1>
+                            <h2 class="text-2xl font-bold mt-2">Sub Heading</h2>
+                        </div>
                     </div>
 
                     <div class="border-l-4 border-green-500 pl-4">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">&lt;p&gt; - Paragraph</h3>
-                        <p class="text-gray-600">Used for text content and paragraphs.</p>
+                        <p class="text-gray-600 mb-3">Used for text content and paragraphs.</p>
                         <pre><code class="language-html">&lt;p&gt;This is a paragraph of text.&lt;/p&gt;</code></pre>
+                        <div class="bg-gray-100 p-4 rounded-lg mt-3 border border-gray-300">
+                            <p class="text-sm text-gray-600 mb-2"><strong>Result:</strong></p>
+                            <p>This is a paragraph of text.</p>
+                        </div>
                     </div>
 
                     <div class="border-l-4 border-green-500 pl-4">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">&lt;a&gt; - Anchor/Link</h3>
-                        <p class="text-gray-600">Creates clickable links to other pages or sections.</p>
+                        <p class="text-gray-600 mb-3">Creates clickable links to other pages or sections.</p>
                         <pre><code class="language-html">&lt;a href="https://example.com"&gt;Click here&lt;/a&gt;</code></pre>
+                        <div class="bg-gray-100 p-4 rounded-lg mt-3 border border-gray-300">
+                            <p class="text-sm text-gray-600 mb-2"><strong>Result:</strong></p>
+                            <a href="https://example.com" class="text-blue-600 underline hover:text-blue-800">Click here</a>
+                        </div>
                     </div>
 
                     <div class="border-l-4 border-green-500 pl-4">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">&lt;img&gt; - Image</h3>
-                        <p class="text-gray-600">Displays images. It's a self-closing tag.</p>
+                        <p class="text-gray-600 mb-3">Displays images. It's a self-closing tag.</p>
                         <pre><code class="language-html">&lt;img src="image.jpg" alt="Description"&gt;</code></pre>
+                        <div class="bg-gray-100 p-4 rounded-lg mt-3 border border-gray-300">
+                            <p class="text-sm text-gray-600 mb-2"><strong>Result:</strong></p>
+                            <img src="https://via.placeholder.com/150" alt="Sample Image" class="rounded border-2 border-gray-400">
+                        </div>
                     </div>
 
                     <div class="border-l-4 border-green-500 pl-4">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">&lt;button&gt; - Button</h3>
-                        <p class="text-gray-600">Creates clickable buttons.</p>
+                        <p class="text-gray-600 mb-3">Creates clickable buttons.</p>
                         <pre><code class="language-html">&lt;button&gt;Click Me&lt;/button&gt;</code></pre>
+                        <div class="bg-gray-100 p-4 rounded-lg mt-3 border border-gray-300">
+                            <p class="text-sm text-gray-600 mb-2"><strong>Result:</strong></p>
+                            <button class="px-4 py-2 bg-gray-300 border border-gray-400 rounded cursor-pointer hover:bg-gray-400">Click Me</button>
+                        </div>
                     </div>
 
                     <div class="border-l-4 border-green-500 pl-4">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">&lt;nav&gt; - Navigation</h3>
-                        <p class="text-gray-600">Contains navigation links for the website.</p>
-                        <pre><code class="language-html">&lt;nav&gt;Navigation menu goes here&lt;/nav&gt;</code></pre>
+                        <p class="text-gray-600 mb-3">Contains navigation links for the website.</p>
+                        <pre><code class="language-html">&lt;nav&gt;
+  &lt;a href="#"&gt;Home&lt;/a&gt;
+  &lt;a href="#"&gt;About&lt;/a&gt;
+  &lt;a href="#"&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+                        <div class="bg-gray-100 p-4 rounded-lg mt-3 border border-gray-300">
+                            <p class="text-sm text-gray-600 mb-2"><strong>Result:</strong></p>
+                            <nav class="flex space-x-4">
+                                <a href="#" class="text-blue-600 underline hover:text-blue-800">Home</a>
+                                <a href="#" class="text-blue-600 underline hover:text-blue-800">About</a>
+                                <a href="#" class="text-blue-600 underline hover:text-blue-800">Contact</a>
+                            </nav>
+                        </div>
                     </div>
 
                     <div class="border-l-4 border-green-500 pl-4">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">&lt;section&gt; - Section</h3>
-                        <p class="text-gray-600">Defines a section in a document.</p>
-                        <pre><code class="language-html">&lt;section&gt;Content section&lt;/section&gt;</code></pre>
+                        <p class="text-gray-600 mb-3">Defines a section in a document.</p>
+                        <pre><code class="language-html">&lt;section&gt;
+  &lt;h2&gt;Section Title&lt;/h2&gt;
+  &lt;p&gt;Content section with text.&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+                        <div class="bg-gray-100 p-4 rounded-lg mt-3 border border-gray-300">
+                            <p class="text-sm text-gray-600 mb-2"><strong>Result:</strong></p>
+                            <section class="bg-white p-4 border border-gray-300 rounded">
+                                <h2 class="text-xl font-bold mb-2">Section Title</h2>
+                                <p>Content section with text.</p>
+                            </section>
+                        </div>
                     </div>
+                </div>
+            </section>
+
+            <!-- Form Tags Recap -->
+            <section class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Form Tags - Quick Recap 📝</h2>
+
+                <div class="space-y-6">
+                    <div class="border-l-4 border-purple-500 pl-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">&lt;form&gt; - Form Container</h3>
+                        <p class="text-gray-600 mb-3">Container for all form elements. It groups inputs together for submission.</p>
+                        <pre><code class="language-html">&lt;form action="/submit" method="POST"&gt;
+  &lt;!-- Form elements go here --&gt;
+&lt;/form&gt;</code></pre>
+                        <div class="bg-gray-100 p-4 rounded-lg mt-3 border border-gray-300">
+                            <p class="text-sm text-gray-600 mb-2"><strong>Result:</strong></p>
+                            <form class="bg-white p-4 border-2 border-purple-200 rounded">
+                                <p class="text-gray-700">Form elements will be placed here</p>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="border-l-4 border-purple-500 pl-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">&lt;input&gt; - Input Field</h3>
+                        <p class="text-gray-600 mb-3">Creates various types of input fields. It's a self-closing tag.</p>
+                        <pre><code class="language-html">&lt;!-- Text input --&gt;
+&lt;input type="text" placeholder="Enter text"&gt;
+
+&lt;!-- Email input --&gt;
+&lt;input type="email" placeholder="Enter email"&gt;
+
+&lt;!-- Password input --&gt;
+&lt;input type="password" placeholder="Enter password"&gt;
+
+&lt;!-- Number input --&gt;
+&lt;input type="number" placeholder="Enter number"&gt;</code></pre>
+                        <div class="bg-gray-100 p-4 rounded-lg mt-3 border border-gray-300">
+                            <p class="text-sm text-gray-600 mb-3"><strong>Result:</strong></p>
+                            <div class="space-y-3">
+                                <div>
+                                    <label class="block text-sm font-medium mb-1">Text input:</label>
+                                    <input type="text" placeholder="Enter text" class="w-full px-3 py-2 border border-gray-300 rounded">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium mb-1">Email input:</label>
+                                    <input type="email" placeholder="Enter email" class="w-full px-3 py-2 border border-gray-300 rounded">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium mb-1">Password input:</label>
+                                    <input type="password" placeholder="Enter password" class="w-full px-3 py-2 border border-gray-300 rounded">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium mb-1">Number input:</label>
+                                    <input type="number" placeholder="Enter number" class="w-full px-3 py-2 border border-gray-300 rounded">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-l-4 border-purple-500 pl-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">&lt;textarea&gt; - Multi-line Text Input</h3>
+                        <p class="text-gray-600 mb-3">Used for longer text input, like messages or comments.</p>
+                        <pre><code class="language-html">&lt;textarea rows="4" placeholder="Enter your message"&gt;&lt;/textarea&gt;</code></pre>
+                        <div class="bg-gray-100 p-4 rounded-lg mt-3 border border-gray-300">
+                            <p class="text-sm text-gray-600 mb-2"><strong>Result:</strong></p>
+                            <textarea rows="4" placeholder="Enter your message" class="w-full px-3 py-2 border border-gray-300 rounded"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="border-l-4 border-purple-500 pl-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">&lt;label&gt; - Input Label</h3>
+                        <p class="text-gray-600 mb-3">Defines a label for an input element. Improves accessibility and usability.</p>
+                        <pre><code class="language-html">&lt;label for="username"&gt;Username:&lt;/label&gt;
+&lt;input type="text" id="username"&gt;</code></pre>
+                        <div class="bg-gray-100 p-4 rounded-lg mt-3 border border-gray-300">
+                            <p class="text-sm text-gray-600 mb-2"><strong>Result:</strong></p>
+                            <label for="username-demo" class="block font-medium mb-1">Username:</label>
+                            <input type="text" id="username-demo" class="w-full px-3 py-2 border border-gray-300 rounded">
+                        </div>
+                    </div>
+
+                    <div class="border-l-4 border-purple-500 pl-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">&lt;select&gt; - Dropdown Menu</h3>
+                        <p class="text-gray-600 mb-3">Creates a dropdown list with multiple options.</p>
+                        <pre><code class="language-html">&lt;select&gt;
+  &lt;option value="1"&gt;Option 1&lt;/option&gt;
+  &lt;option value="2"&gt;Option 2&lt;/option&gt;
+  &lt;option value="3"&gt;Option 3&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+                        <div class="bg-gray-100 p-4 rounded-lg mt-3 border border-gray-300">
+                            <p class="text-sm text-gray-600 mb-2"><strong>Result:</strong></p>
+                            <select class="w-full px-3 py-2 border border-gray-300 rounded bg-white">
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="border-l-4 border-purple-500 pl-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">&lt;option&gt; - Dropdown Option</h3>
+                        <p class="text-gray-600 mb-3">Defines an option in a dropdown menu.</p>
+                        <pre><code class="language-html">&lt;select&gt;
+  &lt;option value="red"&gt;Red&lt;/option&gt;
+  &lt;option value="blue"&gt;Blue&lt;/option&gt;
+  &lt;option value="green"&gt;Green&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+                        <div class="bg-gray-100 p-4 rounded-lg mt-3 border border-gray-300">
+                            <p class="text-sm text-gray-600 mb-2"><strong>Result:</strong></p>
+                            <select class="w-full px-3 py-2 border border-gray-300 rounded bg-white">
+                                <option value="red">Red</option>
+                                <option value="blue">Blue</option>
+                                <option value="green">Green</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="border-l-4 border-purple-500 pl-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">&lt;button&gt; - Form Button</h3>
+                        <p class="text-gray-600 mb-3">Creates a clickable button inside a form.</p>
+                        <pre><code class="language-html">&lt;!-- Submit button --&gt;
+&lt;button type="submit"&gt;Submit&lt;/button&gt;
+
+&lt;!-- Reset button --&gt;
+&lt;button type="reset"&gt;Reset&lt;/button&gt;
+
+&lt;!-- Regular button --&gt;
+&lt;button type="button"&gt;Click Me&lt;/button&gt;</code></pre>
+                        <div class="bg-gray-100 p-4 rounded-lg mt-3 border border-gray-300">
+                            <p class="text-sm text-gray-600 mb-3"><strong>Result:</strong></p>
+                            <div class="flex gap-3">
+                                <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Submit</button>
+                                <button type="reset" class="px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500">Reset</button>
+                                <button type="button" class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">Click Me</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-l-4 border-purple-500 pl-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Checkbox &amp; Radio Inputs</h3>
+                        <p class="text-gray-600 mb-3">Special input types for selections.</p>
+                        <pre><code class="language-html">&lt;!-- Checkbox --&gt;
+&lt;input type="checkbox" id="agree"&gt;
+&lt;label for="agree"&gt;I agree to terms&lt;/label&gt;
+
+&lt;!-- Radio buttons --&gt;
+&lt;input type="radio" name="gender" value="male" id="male"&gt;
+&lt;label for="male"&gt;Male&lt;/label&gt;
+
+&lt;input type="radio" name="gender" value="female" id="female"&gt;
+&lt;label for="female"&gt;Female&lt;/label&gt;</code></pre>
+                        <div class="bg-gray-100 p-4 rounded-lg mt-3 border border-gray-300">
+                            <p class="text-sm text-gray-600 mb-3"><strong>Result:</strong></p>
+                            <div class="space-y-3">
+                                <div>
+                                    <input type="checkbox" id="agree-demo" class="mr-2">
+                                    <label for="agree-demo">I agree to terms</label>
+                                </div>
+                                <div class="space-y-2">
+                                    <p class="font-medium">Gender:</p>
+                                    <div>
+                                        <input type="radio" name="gender-demo" value="male" id="male-demo" class="mr-2">
+                                        <label for="male-demo">Male</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="gender-demo" value="female" id="female-demo" class="mr-2">
+                                        <label for="female-demo">Female</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 bg-purple-50 border-l-4 border-purple-500 p-4 rounded">
+                    <p class="text-purple-700"><strong>💡 Form Tips:</strong></p>
+                    <ul class="text-purple-600 mt-2 space-y-1">
+                        <li>• Always use <code class="bg-purple-100 px-2 py-1 rounded">label</code> elements with inputs for better accessibility</li>
+                        <li>• Use <code class="bg-purple-100 px-2 py-1 rounded">placeholder</code> attribute to show hints</li>
+                        <li>• The <code class="bg-purple-100 px-2 py-1 rounded">type</code> attribute determines the input type</li>
+                        <li>• Radio buttons with the same <code class="bg-purple-100 px-2 py-1 rounded">name</code> allow only one selection</li>
+                    </ul>
                 </div>
             </section>
 
@@ -265,6 +507,128 @@
                     <div class="shadow-md p-4 bg-white rounded">Medium shadow</div>
                     <div class="shadow-lg p-4 bg-white rounded">Large shadow</div>
                     <div class="shadow-xl p-4 bg-white rounded">Extra large shadow</div>
+                </div>
+            </section>
+
+            <!-- Hover Effects and Cursors -->
+            <section class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">5️⃣.5️⃣ Hover Effects & Cursors</h2>
+
+                <h3 class="text-2xl font-semibold text-gray-700 mb-4">Hover Effects</h3>
+                <p class="text-gray-600 mb-4">Add interactive effects when users hover over elements using the <code class="bg-gray-200 px-2 py-1 rounded">hover:</code> prefix:</p>
+
+                <pre><code class="language-html">&lt;!-- Hover background color --&gt;
+&lt;div class="bg-blue-500 hover:bg-blue-700 p-4 text-white"&gt;
+  Hover to change background
+&lt;/div&gt;
+
+&lt;!-- Hover text color --&gt;
+&lt;p class="text-gray-600 hover:text-blue-500"&gt;
+  Hover to change text color
+&lt;/p&gt;
+
+&lt;!-- Hover scale (grow) --&gt;
+&lt;button class="bg-green-500 text-white px-4 py-2 rounded hover:scale-110 transition"&gt;
+  Hover to grow
+&lt;/button&gt;
+
+&lt;!-- Hover shadow --&gt;
+&lt;div class="p-4 border rounded hover:shadow-lg transition"&gt;
+  Hover for shadow
+&lt;/div&gt;</code></pre>
+
+                <div class="bg-gray-100 p-6 rounded-lg mb-6">
+                    <p class="font-semibold mb-4">Result - Try hovering over these:</p>
+                    <div class="space-y-4">
+                        <div class="bg-blue-500 hover:bg-blue-700 p-4 text-white rounded transition cursor-pointer">
+                            Hover to change background
+                        </div>
+                        <p class="text-gray-600 hover:text-blue-500 cursor-pointer transition">
+                            Hover to change text color
+                        </p>
+                        <button class="bg-green-500 text-white px-4 py-2 rounded hover:scale-110 transition">
+                            Hover to grow
+                        </button>
+                        <div class="p-4 border rounded hover:shadow-lg transition cursor-pointer">
+                            Hover for shadow
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-semibold text-gray-700 mb-4">Cursor Styles</h3>
+                <p class="text-gray-600 mb-4">Change the cursor appearance when hovering over elements:</p>
+
+                <pre><code class="language-html">&lt;!-- Pointer cursor (hand) --&gt;
+&lt;div class="cursor-pointer"&gt;Click me (pointer)&lt;/div&gt;
+
+&lt;!-- Default cursor --&gt;
+&lt;div class="cursor-default"&gt;Default cursor&lt;/div&gt;
+
+&lt;!-- Wait cursor --&gt;
+&lt;div class="cursor-wait"&gt;Wait cursor (loading)&lt;/div&gt;
+
+&lt;!-- Not allowed cursor --&gt;
+&lt;div class="cursor-not-allowed"&gt;Not allowed&lt;/div&gt;
+
+&lt;!-- Text cursor --&gt;
+&lt;div class="cursor-text"&gt;Text cursor (I-beam)&lt;/div&gt;
+
+&lt;!-- Move cursor --&gt;
+&lt;div class="cursor-move"&gt;Move cursor&lt;/div&gt;</code></pre>
+
+                <div class="bg-gray-100 p-6 rounded-lg mb-6">
+                    <p class="font-semibold mb-4">Result - Hover to see different cursors:</p>
+                    <div class="space-y-3">
+                        <div class="cursor-pointer p-3 bg-white rounded border">👆 Pointer cursor (hand)</div>
+                        <div class="cursor-default p-3 bg-white rounded border">👉 Default cursor</div>
+                        <div class="cursor-wait p-3 bg-white rounded border">⏳ Wait cursor (loading)</div>
+                        <div class="cursor-not-allowed p-3 bg-white rounded border opacity-50">🚫 Not allowed</div>
+                        <div class="cursor-text p-3 bg-white rounded border">📝 Text cursor (I-beam)</div>
+                        <div class="cursor-move p-3 bg-white rounded border">✋ Move cursor</div>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-semibold text-gray-700 mb-4">Transition Effects</h3>
+                <p class="text-gray-600 mb-4">Make hover effects smooth with transitions:</p>
+
+                <pre><code class="language-html">&lt;!-- Basic transition --&gt;
+&lt;button class="bg-blue-500 hover:bg-blue-700 text-white px-6 py-2 rounded transition"&gt;
+  Smooth Hover
+&lt;/button&gt;
+
+&lt;!-- Transition duration --&gt;
+&lt;button class="bg-purple-500 hover:bg-purple-700 text-white px-6 py-2 rounded transition duration-500"&gt;
+  Slow Hover (500ms)
+&lt;/button&gt;
+
+&lt;!-- Multiple hover effects --&gt;
+&lt;button class="bg-red-500 hover:bg-red-700 hover:scale-105 text-white px-6 py-2 rounded transition"&gt;
+  Color + Scale
+&lt;/button&gt;</code></pre>
+
+                <div class="bg-gray-100 p-6 rounded-lg">
+                    <p class="font-semibold mb-4">Result:</p>
+                    <div class="flex flex-wrap gap-4">
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white px-6 py-2 rounded transition">
+                            Smooth Hover
+                        </button>
+                        <button class="bg-purple-500 hover:bg-purple-700 text-white px-6 py-2 rounded transition duration-500">
+                            Slow Hover (500ms)
+                        </button>
+                        <button class="bg-red-500 hover:bg-red-700 hover:scale-105 text-white px-6 py-2 rounded transition">
+                            Color + Scale
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mt-6 bg-indigo-50 border-l-4 border-indigo-500 p-4 rounded">
+                    <p class="text-indigo-700 font-semibold">💡 Hover & Cursor Tips:</p>
+                    <ul class="text-indigo-600 mt-2 space-y-1">
+                        <li>• Always add <code class="bg-indigo-100 px-2 py-1 rounded">transition</code> class for smooth animations</li>
+                        <li>• Use <code class="bg-indigo-100 px-2 py-1 rounded">cursor-pointer</code> on clickable elements</li>
+                        <li>• Combine hover effects: <code class="bg-indigo-100 px-2 py-1 rounded">hover:bg-blue-500 hover:scale-110</code></li>
+                        <li>• Use <code class="bg-indigo-100 px-2 py-1 rounded">duration-{time}</code> to control animation speed (300, 500, 700ms)</li>
+                    </ul>
                 </div>
             </section>
 
@@ -837,72 +1201,161 @@
             <section class="section bg-white p-8 rounded-lg shadow-md">
                 <h2 class="text-3xl font-bold text-gray-800 mb-6">📖 Quick Reference Guide</h2>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-gray-50 p-4 rounded-lg">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-500">
                         <h3 class="text-xl font-bold text-gray-800 mb-3">Colors</h3>
-                        <ul class="text-gray-700 space-y-1">
+                        <ul class="text-gray-700 space-y-1 text-sm">
                             <li>• <code class="bg-gray-200 px-2 py-1 rounded">text-{color}-{shade}</code> - Text color
                             </li>
                             <li>• <code class="bg-gray-200 px-2 py-1 rounded">bg-{color}-{shade}</code> - Background
                                 color</li>
-                            <li>• Colors: blue, red, green, purple, yellow, gray</li>
-                            <li>• Shades: 100-900 (lighter to darker)</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">border-{color}-{shade}</code> - Border color</li>
+                            <li>• Colors: blue, red, green, purple, yellow, gray, pink, indigo</li>
+                            <li>• Shades: 50, 100-900 (lighter to darker)</li>
                         </ul>
                     </div>
 
-                    <div class="bg-gray-50 p-4 rounded-lg">
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-green-500">
                         <h3 class="text-xl font-bold text-gray-800 mb-3">Spacing</h3>
-                        <ul class="text-gray-700 space-y-1">
+                        <ul class="text-gray-700 space-y-1 text-sm">
                             <li>• <code class="bg-gray-200 px-2 py-1 rounded">p-{size}</code> - Padding all sides</li>
                             <li>• <code class="bg-gray-200 px-2 py-1 rounded">px-{size}</code> - Padding left/right</li>
                             <li>• <code class="bg-gray-200 px-2 py-1 rounded">py-{size}</code> - Padding top/bottom</li>
                             <li>• <code class="bg-gray-200 px-2 py-1 rounded">m-{size}</code> - Margin (same pattern)
                             </li>
+                            <li>• Sizes: 0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24</li>
                         </ul>
                     </div>
 
-                    <div class="bg-gray-50 p-4 rounded-lg">
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-500">
                         <h3 class="text-xl font-bold text-gray-800 mb-3">Text</h3>
-                        <ul class="text-gray-700 space-y-1">
+                        <ul class="text-gray-700 space-y-1 text-sm">
                             <li>• <code class="bg-gray-200 px-2 py-1 rounded">text-{size}</code> - xs, sm, base, lg, xl,
-                                2xl, 3xl</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">font-{weight}</code> - light, normal,
-                                semibold, bold</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">text-{align}</code> - left, center, right
+                                2xl, 3xl, 4xl, 5xl</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">font-{weight}</code> - thin, light, normal,
+                                medium, semibold, bold, extrabold, black</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">text-{align}</code> - left, center, right, justify
                             </li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">uppercase</code> - Transform to uppercase</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">lowercase</code> - Transform to lowercase</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">capitalize</code> - Capitalize first letter</li>
                         </ul>
                     </div>
 
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Layout</h3>
-                        <ul class="text-gray-700 space-y-1">
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-yellow-500">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Layout - Flexbox</h3>
+                        <ul class="text-gray-700 space-y-1 text-sm">
                             <li>• <code class="bg-gray-200 px-2 py-1 rounded">flex</code> - Flexbox container</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">grid grid-cols-{n}</code> - Grid layout
-                            </li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">justify-{type}</code> - center, between,
-                                around</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">items-center</code> - Vertical center</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">flex-row</code> - Horizontal direction</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">flex-col</code> - Vertical direction</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">justify-{type}</code> - start, center, end, between, around, evenly</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">items-{type}</code> - start, center, end, stretch</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">flex-wrap</code> - Allow wrapping</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">gap-{size}</code> - Space between items</li>
                         </ul>
                     </div>
 
-                    <div class="bg-gray-50 p-4 rounded-lg">
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-red-500">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Layout - Grid</h3>
+                        <ul class="text-gray-700 space-y-1 text-sm">
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">grid</code> - Grid container</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">grid-cols-{n}</code> - Number of columns (1-12)</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">grid-rows-{n}</code> - Number of rows</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">gap-{size}</code> - Gap between cells</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">col-span-{n}</code> - Span across columns</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">row-span-{n}</code> - Span across rows</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-indigo-500">
                         <h3 class="text-xl font-bold text-gray-800 mb-3">Borders & Corners</h3>
-                        <ul class="text-gray-700 space-y-1">
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">border</code> - Add border</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">border-{size}</code> - 2, 4, 8</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">rounded</code> - Small corners</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">rounded-{size}</code> - lg, xl, full</li>
+                        <ul class="text-gray-700 space-y-1 text-sm">
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">border</code> - Add border (1px)</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">border-{size}</code> - 0, 2, 4, 8</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">border-{side}</code> - t, r, b, l (top, right, bottom, left)</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">rounded</code> - Small corners (4px)</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">rounded-{size}</code> - sm, md, lg, xl, 2xl, 3xl, full</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">rounded-{corner}</code> - tl, tr, bl, br</li>
                         </ul>
                     </div>
 
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Effects</h3>
-                        <ul class="text-gray-700 space-y-1">
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">shadow-{size}</code> - sm, md, lg, xl</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">hover:bg-{color}</code> - Hover effect
-                            </li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">opacity-{value}</code> - 0-100</li>
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-pink-500">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Effects & Shadows</h3>
+                        <ul class="text-gray-700 space-y-1 text-sm">
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">shadow-{size}</code> - sm, md, lg, xl, 2xl</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">shadow-none</code> - Remove shadow</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">opacity-{value}</code> - 0, 25, 50, 75, 100</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">blur-{size}</code> - sm, md, lg, xl</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">brightness-{value}</code> - 0-200</li>
                         </ul>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-teal-500">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Width & Height</h3>
+                        <ul class="text-gray-700 space-y-1 text-sm">
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">w-{size}</code> - Width (1-96, full, screen, auto)</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">h-{size}</code> - Height (1-96, full, screen, auto)</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">min-w-{size}</code> - Minimum width</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">max-w-{size}</code> - Maximum width (xs, sm, md, lg, xl, 2xl-7xl)</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">min-h-{size}</code> - Minimum height</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">max-h-{size}</code> - Maximum height</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-orange-500">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Hover & Interactive</h3>
+                        <ul class="text-gray-700 space-y-1 text-sm">
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">hover:bg-{color}</code> - Hover background</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">hover:text-{color}</code> - Hover text color</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">hover:scale-{value}</code> - 95, 100, 105, 110</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">cursor-pointer</code> - Pointer cursor</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">transition</code> - Smooth transitions</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">duration-{time}</code> - 150, 200, 300, 500, 700, 1000</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-cyan-500">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Display & Position</h3>
+                        <ul class="text-gray-700 space-y-1 text-sm">
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">block</code> - Display block</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">inline-block</code> - Inline block</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">hidden</code> - Hide element</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">relative</code> - Relative position</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">absolute</code> - Absolute position</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">fixed</code> - Fixed position</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">sticky</code> - Sticky position</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-lime-500">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Overflow & Z-Index</h3>
+                        <ul class="text-gray-700 space-y-1 text-sm">
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">overflow-hidden</code> - Hide overflow</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">overflow-auto</code> - Auto scrollbars</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">overflow-scroll</code> - Always scrollbars</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">overflow-x-{type}</code> - Horizontal overflow</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">overflow-y-{type}</code> - Vertical overflow</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">z-{value}</code> - 0, 10, 20, 30, 40, 50</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="mt-8 bg-gradient-to-r from-blue-50 to-purple-50 border-2 border-blue-200 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">🎯 Pro Tips for Using the Cheatsheet</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-gray-700">
+                        <div>
+                            <p class="font-semibold text-purple-700 mb-2">🎨 Color Consistency</p>
+                            <p class="text-sm">Stick to a color palette. Use shades 100-200 for backgrounds, 500-600 for primary colors, 700-900 for text.</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-green-700 mb-2">🔄 Combine Classes</p>
+                            <p class="text-sm">Tailwind works by combining utilities. Don't be afraid to use many classes on one element!</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-red-700 mb-2">⚡ Performance</p>
+                            <p class="text-sm">In production, use Tailwind's purge feature to remove unused classes and keep file sizes small.</p>
+                        </div>
                     </div>
                 </div>
             </section>
