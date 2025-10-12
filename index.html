@@ -11,25 +11,24 @@
             .section {
                 margin-bottom: 4rem;
             }
-            
+
             .section::after {
                 content: '';
                 display: block;
                 width: 100%;
                 height: 2px;
-                background: linear-gradient(to right, transparent, #e5e7eb, transparent);
                 margin-top: 3rem;
             }
-            
+
             .section:last-of-type::after {
                 display: none;
             }
-            
+
             pre[class*="language-"] {
                 margin: 1rem 0;
                 border-radius: 0.5rem;
             }
-            
+
             code[class*="language-"] {
                 font-size: 0.9rem;
             }
@@ -60,7 +59,8 @@
                 <div class="space-y-6">
                     <div class="border-l-4 border-green-500 pl-4">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">&lt;div&gt; - Division/Container</h3>
-                        <p class="text-gray-600 mb-3">Used to group and organize content. It's a block-level element.</p>
+                        <p class="text-gray-600 mb-3">Used to group and organize content. It's a block-level element.
+                        </p>
                         <pre><code class="language-html">&lt;div&gt;This is a container&lt;/div&gt;</code></pre>
                         <div class="bg-gray-100 p-4 rounded-lg mt-3 border border-gray-300">
                             <p class="text-sm text-gray-600 mb-2"><strong>Result:</strong></p>
@@ -96,7 +96,8 @@
                         <pre><code class="language-html">&lt;a href="https://example.com"&gt;Click here&lt;/a&gt;</code></pre>
                         <div class="bg-gray-100 p-4 rounded-lg mt-3 border border-gray-300">
                             <p class="text-sm text-gray-600 mb-2"><strong>Result:</strong></p>
-                            <a href="https://example.com" class="text-blue-600 underline hover:text-blue-800">Click here</a>
+                            <a href="https://example.com" class="text-blue-600 underline hover:text-blue-800">Click
+                                here</a>
                         </div>
                     </div>
 
@@ -106,7 +107,8 @@
                         <pre><code class="language-html">&lt;img src="image.jpg" alt="Description"&gt;</code></pre>
                         <div class="bg-gray-100 p-4 rounded-lg mt-3 border border-gray-300">
                             <p class="text-sm text-gray-600 mb-2"><strong>Result:</strong></p>
-                            <img src="https://via.placeholder.com/150" alt="Sample Image" class="rounded border-2 border-gray-400">
+                            <img src="https://placehold.co/150" alt="Sample Image"
+                                class="rounded border-2 border-gray-400">
                         </div>
                     </div>
 
@@ -116,7 +118,9 @@
                         <pre><code class="language-html">&lt;button&gt;Click Me&lt;/button&gt;</code></pre>
                         <div class="bg-gray-100 p-4 rounded-lg mt-3 border border-gray-300">
                             <p class="text-sm text-gray-600 mb-2"><strong>Result:</strong></p>
-                            <button class="px-4 py-2 bg-gray-300 border border-gray-400 rounded cursor-pointer hover:bg-gray-400">Click Me</button>
+                            <button
+                                class="px-4 py-2 bg-gray-300 border border-gray-400 rounded cursor-pointer hover:bg-gray-400">Click
+                                Me</button>
                         </div>
                     </div>
 
@@ -163,7 +167,8 @@
                 <div class="space-y-6">
                     <div class="border-l-4 border-purple-500 pl-4">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">&lt;form&gt; - Form Container</h3>
-                        <p class="text-gray-600 mb-3">Container for all form elements. It groups inputs together for submission.</p>
+                        <p class="text-gray-600 mb-3">Container for all form elements. It groups inputs together for
+                            submission.</p>
                         <pre><code class="language-html">&lt;form action="/submit" method="POST"&gt;
   &lt;!-- Form elements go here --&gt;
 &lt;/form&gt;</code></pre>
@@ -177,7 +182,8 @@
 
                     <div class="border-l-4 border-purple-500 pl-4">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">&lt;input&gt; - Input Field</h3>
-                        <p class="text-gray-600 mb-3">Creates various types of input fields. It's a self-closing tag.</p>
+                        <p class="text-gray-600 mb-3">Creates various types of input fields. It's a self-closing tag.
+                        </p>
                         <pre><code class="language-html">&lt;!-- Text input --&gt;
 &lt;input type="text" placeholder="Enter text"&gt;
 
@@ -194,43 +200,51 @@
                             <div class="space-y-3">
                                 <div>
                                     <label class="block text-sm font-medium mb-1">Text input:</label>
-                                    <input type="text" placeholder="Enter text" class="w-full px-3 py-2 border border-gray-300 rounded">
+                                    <input type="text" placeholder="Enter text"
+                                        class="w-full px-3 py-2 border border-gray-300 rounded">
                                 </div>
                                 <div>
                                     <label class="block text-sm font-medium mb-1">Email input:</label>
-                                    <input type="email" placeholder="Enter email" class="w-full px-3 py-2 border border-gray-300 rounded">
+                                    <input type="email" placeholder="Enter email"
+                                        class="w-full px-3 py-2 border border-gray-300 rounded">
                                 </div>
                                 <div>
                                     <label class="block text-sm font-medium mb-1">Password input:</label>
-                                    <input type="password" placeholder="Enter password" class="w-full px-3 py-2 border border-gray-300 rounded">
+                                    <input type="password" placeholder="Enter password"
+                                        class="w-full px-3 py-2 border border-gray-300 rounded">
                                 </div>
                                 <div>
                                     <label class="block text-sm font-medium mb-1">Number input:</label>
-                                    <input type="number" placeholder="Enter number" class="w-full px-3 py-2 border border-gray-300 rounded">
+                                    <input type="number" placeholder="Enter number"
+                                        class="w-full px-3 py-2 border border-gray-300 rounded">
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="border-l-4 border-purple-500 pl-4">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">&lt;textarea&gt; - Multi-line Text Input</h3>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">&lt;textarea&gt; - Multi-line Text Input
+                        </h3>
                         <p class="text-gray-600 mb-3">Used for longer text input, like messages or comments.</p>
                         <pre><code class="language-html">&lt;textarea rows="4" placeholder="Enter your message"&gt;&lt;/textarea&gt;</code></pre>
                         <div class="bg-gray-100 p-4 rounded-lg mt-3 border border-gray-300">
                             <p class="text-sm text-gray-600 mb-2"><strong>Result:</strong></p>
-                            <textarea rows="4" placeholder="Enter your message" class="w-full px-3 py-2 border border-gray-300 rounded"></textarea>
+                            <textarea rows="4" placeholder="Enter your message"
+                                class="w-full px-3 py-2 border border-gray-300 rounded"></textarea>
                         </div>
                     </div>
 
                     <div class="border-l-4 border-purple-500 pl-4">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">&lt;label&gt; - Input Label</h3>
-                        <p class="text-gray-600 mb-3">Defines a label for an input element. Improves accessibility and usability.</p>
+                        <p class="text-gray-600 mb-3">Defines a label for an input element. Improves accessibility and
+                            usability.</p>
                         <pre><code class="language-html">&lt;label for="username"&gt;Username:&lt;/label&gt;
 &lt;input type="text" id="username"&gt;</code></pre>
                         <div class="bg-gray-100 p-4 rounded-lg mt-3 border border-gray-300">
                             <p class="text-sm text-gray-600 mb-2"><strong>Result:</strong></p>
                             <label for="username-demo" class="block font-medium mb-1">Username:</label>
-                            <input type="text" id="username-demo" class="w-full px-3 py-2 border border-gray-300 rounded">
+                            <input type="text" id="username-demo"
+                                class="w-full px-3 py-2 border border-gray-300 rounded">
                         </div>
                     </div>
 
@@ -284,9 +298,13 @@
                         <div class="bg-gray-100 p-4 rounded-lg mt-3 border border-gray-300">
                             <p class="text-sm text-gray-600 mb-3"><strong>Result:</strong></p>
                             <div class="flex gap-3">
-                                <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Submit</button>
-                                <button type="reset" class="px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500">Reset</button>
-                                <button type="button" class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">Click Me</button>
+                                <button type="submit"
+                                    class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Submit</button>
+                                <button type="reset"
+                                    class="px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500">Reset</button>
+                                <button type="button"
+                                    class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">Click
+                                    Me</button>
                             </div>
                         </div>
                     </div>
@@ -318,7 +336,8 @@
                                         <label for="male-demo">Male</label>
                                     </div>
                                     <div>
-                                        <input type="radio" name="gender-demo" value="female" id="female-demo" class="mr-2">
+                                        <input type="radio" name="gender-demo" value="female" id="female-demo"
+                                            class="mr-2">
                                         <label for="female-demo">Female</label>
                                     </div>
                                 </div>
@@ -330,10 +349,14 @@
                 <div class="mt-6 bg-purple-50 border-l-4 border-purple-500 p-4 rounded">
                     <p class="text-purple-700"><strong>💡 Form Tips:</strong></p>
                     <ul class="text-purple-600 mt-2 space-y-1">
-                        <li>• Always use <code class="bg-purple-100 px-2 py-1 rounded">label</code> elements with inputs for better accessibility</li>
-                        <li>• Use <code class="bg-purple-100 px-2 py-1 rounded">placeholder</code> attribute to show hints</li>
-                        <li>• The <code class="bg-purple-100 px-2 py-1 rounded">type</code> attribute determines the input type</li>
-                        <li>• Radio buttons with the same <code class="bg-purple-100 px-2 py-1 rounded">name</code> allow only one selection</li>
+                        <li>• Always use <code class="bg-purple-100 px-2 py-1 rounded">label</code> elements with inputs
+                            for better accessibility</li>
+                        <li>• Use <code class="bg-purple-100 px-2 py-1 rounded">placeholder</code> attribute to show
+                            hints</li>
+                        <li>• The <code class="bg-purple-100 px-2 py-1 rounded">type</code> attribute determines the
+                            input type</li>
+                        <li>• Radio buttons with the same <code class="bg-purple-100 px-2 py-1 rounded">name</code>
+                            allow only one selection</li>
                     </ul>
                 </div>
             </section>
@@ -380,46 +403,9 @@
                 </div>
             </section>
 
-            <!-- Spacing -->
-            <section class="section bg-white p-8 rounded-lg shadow-md">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6">2️⃣ Spacing (Padding & Margin)</h2>
-
-                <h3 class="text-2xl font-semibold text-gray-700 mb-4">Padding</h3>
-                <p class="text-gray-600 mb-4">Padding adds space <strong>inside</strong> an element:</p>
-
-                <pre><code class="language-html">&lt;div class="p-4"&gt;Padding on all sides&lt;/div&gt;
-&lt;div class="px-6"&gt;Padding left and right only&lt;/div&gt;
-&lt;div class="py-8"&gt;Padding top and bottom only&lt;/div&gt;
-&lt;div class="pt-4 pb-2"&gt;Different padding top and bottom&lt;/div&gt;</code></pre>
-
-                <div class="space-y-2 mb-6">
-                    <p class="font-semibold mb-2">Result:</p>
-                    <div class="bg-blue-100 p-4 inline-block rounded">Padding on all sides (p-4)</div><br>
-                    <div class="bg-green-100 px-6 inline-block rounded">Padding left and right (px-6)</div><br>
-                    <div class="bg-purple-100 py-8 inline-block rounded">Padding top and bottom (py-8)</div>
-                </div>
-
-                <h3 class="text-2xl font-semibold text-gray-700 mb-4">Margin</h3>
-                <p class="text-gray-600 mb-4">Margin adds space <strong>outside</strong> an element:</p>
-
-                <pre><code class="language-html">&lt;div class="m-4"&gt;Margin on all sides&lt;/div&gt;
-&lt;div class="mx-auto"&gt;Center element horizontally&lt;/div&gt;
-&lt;div class="mt-8"&gt;Margin top only&lt;/div&gt;</code></pre>
-
-                <div class="bg-gray-100 p-4 rounded">
-                    <p class="font-semibold mb-2">Common spacing values:</p>
-                    <ul class="list-disc list-inside text-gray-700">
-                        <li><code class="bg-gray-200 px-2 py-1 rounded">p-2</code> = 0.5rem (8px)</li>
-                        <li><code class="bg-gray-200 px-2 py-1 rounded">p-4</code> = 1rem (16px)</li>
-                        <li><code class="bg-gray-200 px-2 py-1 rounded">p-6</code> = 1.5rem (24px)</li>
-                        <li><code class="bg-gray-200 px-2 py-1 rounded">p-8</code> = 2rem (32px)</li>
-                    </ul>
-                </div>
-            </section>
-
             <!-- Typography -->
             <section class="section bg-white p-8 rounded-lg shadow-md">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6">3️⃣ Typography (Text Styling)</h2>
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">2️⃣ Typography (Text Styling)</h2>
 
                 <h3 class="text-2xl font-semibold text-gray-700 mb-4">Font Size</h3>
                 <pre><code class="language-html">&lt;p class="text-xs"&gt;Extra small text&lt;/p&gt;
@@ -465,6 +451,43 @@
                     <p class="text-left">Left aligned</p>
                     <p class="text-center">Center aligned</p>
                     <p class="text-right">Right aligned</p>
+                </div>
+            </section>
+
+            <!-- Spacing -->
+            <section class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">3️⃣Spacing (Padding & Margin)</h2>
+
+                <h3 class="text-2xl font-semibold text-gray-700 mb-4">Padding</h3>
+                <p class="text-gray-600 mb-4">Padding adds space <strong>inside</strong> an element:</p>
+
+                <pre><code class="language-html">&lt;div class="p-4"&gt;Padding on all sides&lt;/div&gt;
+&lt;div class="px-6"&gt;Padding left and right only&lt;/div&gt;
+&lt;div class="py-8"&gt;Padding top and bottom only&lt;/div&gt;
+&lt;div class="pt-4 pb-2"&gt;Different padding top and bottom&lt;/div&gt;</code></pre>
+
+                <div class="space-y-2 mb-6">
+                    <p class="font-semibold mb-2">Result:</p>
+                    <div class="bg-blue-100 p-4 inline-block rounded">Padding on all sides (p-4)</div><br>
+                    <div class="bg-green-100 px-6 inline-block rounded">Padding left and right (px-6)</div><br>
+                    <div class="bg-purple-100 py-8 inline-block rounded">Padding top and bottom (py-8)</div>
+                </div>
+
+                <h3 class="text-2xl font-semibold text-gray-700 mb-4">Margin</h3>
+                <p class="text-gray-600 mb-4">Margin adds space <strong>outside</strong> an element:</p>
+
+                <pre><code class="language-html">&lt;div class="m-4"&gt;Margin on all sides&lt;/div&gt;
+&lt;div class="mx-auto"&gt;Center element horizontally&lt;/div&gt;
+&lt;div class="mt-8"&gt;Margin top only&lt;/div&gt;</code></pre>
+
+                <div class="bg-gray-100 p-4 rounded">
+                    <p class="font-semibold mb-2">Common spacing values:</p>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li><code class="bg-gray-200 px-2 py-1 rounded">p-2</code> = 0.5rem (8px)</li>
+                        <li><code class="bg-gray-200 px-2 py-1 rounded">p-4</code> = 1rem (16px)</li>
+                        <li><code class="bg-gray-200 px-2 py-1 rounded">p-6</code> = 1.5rem (24px)</li>
+                        <li><code class="bg-gray-200 px-2 py-1 rounded">p-8</code> = 2rem (32px)</li>
+                    </ul>
                 </div>
             </section>
 
@@ -515,7 +538,8 @@
                 <h2 class="text-3xl font-bold text-gray-800 mb-6">5️⃣.5️⃣ Hover Effects & Cursors</h2>
 
                 <h3 class="text-2xl font-semibold text-gray-700 mb-4">Hover Effects</h3>
-                <p class="text-gray-600 mb-4">Add interactive effects when users hover over elements using the <code class="bg-gray-200 px-2 py-1 rounded">hover:</code> prefix:</p>
+                <p class="text-gray-600 mb-4">Add interactive effects when users hover over elements using the <code
+                        class="bg-gray-200 px-2 py-1 rounded">hover:</code> prefix:</p>
 
                 <pre><code class="language-html">&lt;!-- Hover background color --&gt;
 &lt;div class="bg-blue-500 hover:bg-blue-700 p-4 text-white"&gt;
@@ -612,10 +636,12 @@
                         <button class="bg-blue-500 hover:bg-blue-700 text-white px-6 py-2 rounded transition">
                             Smooth Hover
                         </button>
-                        <button class="bg-purple-500 hover:bg-purple-700 text-white px-6 py-2 rounded transition duration-500">
+                        <button
+                            class="bg-purple-500 hover:bg-purple-700 text-white px-6 py-2 rounded transition duration-500">
                             Slow Hover (500ms)
                         </button>
-                        <button class="bg-red-500 hover:bg-red-700 hover:scale-105 text-white px-6 py-2 rounded transition">
+                        <button
+                            class="bg-red-500 hover:bg-red-700 hover:scale-105 text-white px-6 py-2 rounded transition">
                             Color + Scale
                         </button>
                     </div>
@@ -624,10 +650,14 @@
                 <div class="mt-6 bg-indigo-50 border-l-4 border-indigo-500 p-4 rounded">
                     <p class="text-indigo-700 font-semibold">💡 Hover & Cursor Tips:</p>
                     <ul class="text-indigo-600 mt-2 space-y-1">
-                        <li>• Always add <code class="bg-indigo-100 px-2 py-1 rounded">transition</code> class for smooth animations</li>
-                        <li>• Use <code class="bg-indigo-100 px-2 py-1 rounded">cursor-pointer</code> on clickable elements</li>
-                        <li>• Combine hover effects: <code class="bg-indigo-100 px-2 py-1 rounded">hover:bg-blue-500 hover:scale-110</code></li>
-                        <li>• Use <code class="bg-indigo-100 px-2 py-1 rounded">duration-{time}</code> to control animation speed (300, 500, 700ms)</li>
+                        <li>• Always add <code class="bg-indigo-100 px-2 py-1 rounded">transition</code> class for
+                            smooth animations</li>
+                        <li>• Use <code class="bg-indigo-100 px-2 py-1 rounded">cursor-pointer</code> on clickable
+                            elements</li>
+                        <li>• Combine hover effects: <code
+                                class="bg-indigo-100 px-2 py-1 rounded">hover:bg-blue-500 hover:scale-110</code></li>
+                        <li>• Use <code class="bg-indigo-100 px-2 py-1 rounded">duration-{time}</code> to control
+                            animation speed (300, 500, 700ms)</li>
                     </ul>
                 </div>
             </section>
@@ -872,36 +902,37 @@
                     <p class="font-semibold mb-4">Result:</p>
                     <div class="bg-white shadow-md rounded-lg p-8 max-w-md mx-auto">
                         <h2 class="text-2xl font-bold text-gray-800 mb-6">Contact Us</h2>
-                        
+
                         <form>
                             <!-- Name Input -->
                             <div class="mb-4">
                                 <label class="block text-gray-700 font-semibold mb-2">Name</label>
-                                <input type="text" 
-                                       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" 
-                                       placeholder="Enter your name">
+                                <input type="text"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                                    placeholder="Enter your name">
                             </div>
 
                             <!-- Email Input -->
                             <div class="mb-4">
                                 <label class="block text-gray-700 font-semibold mb-2">Email</label>
-                                <input type="email" 
-                                       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" 
-                                       placeholder="Enter your email">
+                                <input type="email"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                                    placeholder="Enter your email">
                             </div>
 
                             <!-- Message Textarea -->
                             <div class="mb-4">
                                 <label class="block text-gray-700 font-semibold mb-2">Message</label>
-                                <textarea 
-                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 h-32" 
+                                <textarea
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 h-32"
                                     placeholder="Enter your message"></textarea>
                             </div>
 
                             <!-- Select Dropdown -->
                             <div class="mb-6">
                                 <label class="block text-gray-700 font-semibold mb-2">Subject</label>
-                                <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                                <select
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
                                     <option>General Inquiry</option>
                                     <option>Support</option>
                                     <option>Feedback</option>
@@ -909,8 +940,8 @@
                             </div>
 
                             <!-- Submit Button -->
-                            <button type="submit" 
-                                    class="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition">
+                            <button type="submit"
+                                class="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition">
                                 Send Message
                             </button>
                         </form>
@@ -920,10 +951,14 @@
                 <div class="mt-6 bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
                     <p class="text-blue-700 font-semibold">💡 Form Styling Tips:</p>
                     <ul class="text-blue-600 mt-2 space-y-1">
-                        <li>• Use <code class="bg-blue-100 px-2 py-1 rounded">w-full</code> to make inputs full width</li>
-                        <li>• <code class="bg-blue-100 px-2 py-1 rounded">focus:outline-none</code> removes default outline</li>
-                        <li>• <code class="bg-blue-100 px-2 py-1 rounded">focus:border-blue-500</code> adds color on focus</li>
-                        <li>• <code class="bg-blue-100 px-2 py-1 rounded">block</code> makes labels display above inputs</li>
+                        <li>• Use <code class="bg-blue-100 px-2 py-1 rounded">w-full</code> to make inputs full width
+                        </li>
+                        <li>• <code class="bg-blue-100 px-2 py-1 rounded">focus:outline-none</code> removes default
+                            outline</li>
+                        <li>• <code class="bg-blue-100 px-2 py-1 rounded">focus:border-blue-500</code> adds color on
+                            focus</li>
+                        <li>• <code class="bg-blue-100 px-2 py-1 rounded">block</code> makes labels display above inputs
+                        </li>
                     </ul>
                 </div>
             </section>
@@ -934,134 +969,117 @@
 
                 <p class="text-gray-600 mb-4">Here's a complete, simple website combining everything we learned:</p>
 
-                <pre><code class="language-html">&lt;!DOCTYPE html&gt;
-                    &lt;html lang="en"&gt;
-                    &lt;head&gt;
-                    &lt;meta charset="UTF-8"&gt;
-                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-                    &lt;title&gt;My Portfolio&lt;/title&gt;
-                    &lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;
-                    &lt;/head&gt;
-                    &lt;body class="bg-gray-50"&gt;
+                <pre><code class="language-html">
+&#60;!DOCTYPE html&#62;
+&#60;html lang="en"&#62;
+  &#60;head&#62;
+    &#60;meta charset="UTF-8" /&#62;
+    &#60;meta name="viewport" content="width=device-width, initial-scale=1.0" /&#62;
+    &#60;title&#62;My Portfolio&#60;/title&#62;
+    &#60;script src="https://cdn.tailwindcss.com"&#62;&#60;/script&#62;
+  &#60;/head&#62;
+  &#60;body class="bg-gray-50"&#62;
+    &#60;!-- Navigation --&#62;
+    &#60;nav class="bg-blue-600 text-white p-4 shadow-lg"&#62;
+      &#60;div class="container mx-auto flex justify-between items-center"&#62;
+        &#60;div class="text-2xl font-bold"&#62;My Portfolio&#60;/div&#62;
+        &#60;div class="space-x-6"&#62;
+          &#60;a href="#home" class="hover:text-blue-200"&#62;Home&#60;/a&#62;
+          &#60;a href="#about" class="hover:text-blue-200"&#62;About&#60;/a&#62;
+          &#60;a href="#projects" class="hover:text-blue-200"&#62;Projects&#60;/a&#62;
+          &#60;a href="#contact" class="hover:text-blue-200"&#62;Contact&#60;/a&#62;
+        &#60;/div&#62;
+      &#60;/div&#62;
+    &#60;/nav&#62;
 
-                    &lt;!-- Navigation --&gt;
-                    &lt;nav class="bg-blue-600 text-white p-4 shadow-lg"&gt;
-                    &lt;div class="container mx-auto flex justify-between items-center"&gt;
-                    &lt;div class="text-2xl font-bold"&gt;My Portfolio&lt;/div&gt;
-                    &lt;div class="space-x-6"&gt;
-                    &lt;a href="#home" class="hover:text-blue-200"&gt;Home&lt;/a&gt;
-                    &lt;a href="#about" class="hover:text-blue-200"&gt;About&lt;/a&gt;
-                    &lt;a href="#projects" class="hover:text-blue-200"&gt;Projects&lt;/a&gt;
-                    &lt;a href="#contact" class="hover:text-blue-200"&gt;Contact&lt;/a&gt;
-                    &lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;/nav&gt;
+    &#60;!-- Hero Section --&#62;
+    &#60;section id="home" class="bg-blue-500 text-white py-20"&#62;
+      &#60;div class="container mx-auto text-center"&#62;
+        &#60;h1 class="text-5xl font-bold mb-4"&#62;Welcome to My Portfolio&#60;/h1&#62;
+        &#60;p class="text-xl mb-8"&#62;I'm a student learning web development&#60;/p&#62;
+        &#60;button class="bg-white text-blue-500 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50"&#62;
+          View My Work
+        &#60;/button&#62;
+      &#60;/div&#62;
+    &#60;/section&#62;
 
-                    &lt;!-- Hero Section --&gt;
-                    &lt;section id="home" class="bg-blue-500 text-white py-20"&gt;
-                    &lt;div class="container mx-auto text-center"&gt;
-                    &lt;h1 class="text-5xl font-bold mb-4"&gt;Welcome to My Portfolio&lt;/h1&gt;
-                    &lt;p class="text-xl mb-8"&gt;I'm a student learning web development&lt;/p&gt;
-                    &lt;button class="bg-white text-blue-500 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50"&gt;
-                    View My Work
-                    &lt;/button&gt;
-                    &lt;/div&gt;
-                    &lt;/section&gt;
+    &#60;!-- About Section --&#62;
+    &#60;section id="about" class="py-16"&#62;
+      &#60;div class="container mx-auto px-4"&#62;
+        &#60;h2 class="text-4xl font-bold text-center text-gray-800 mb-8"&#62;About Me&#60;/h2&#62;
+        &#60;div class="max-w-2xl mx-auto text-center"&#62;
+          &#60;p class="text-gray-600 text-lg mb-4"&#62;
+            I'm a Class 11th student passionate about web development and design. I love creating
+            beautiful and functional websites using modern technologies.
+          &#60;/p&#62;
+        &#60;/div&#62;
+      &#60;/div&#62;
+    &#60;/section&#62;
 
-                    &lt;!-- About Section --&gt;
-                    &lt;section id="about" class="py-16"&gt;
-                    &lt;div class="container mx-auto px-4"&gt;
-                    &lt;h2 class="text-4xl font-bold text-center text-gray-800 mb-8"&gt;About Me&lt;/h2&gt;
-                    &lt;div class="max-w-2xl mx-auto text-center"&gt;
-                    &lt;p class="text-gray-600 text-lg mb-4"&gt;
-                    I'm a Class 11th student passionate about web development and design.
-                    I love creating beautiful and functional websites using modern technologies.
-                    &lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;/section&gt;
+    &#60;!-- Projects Section --&#62;
+    &#60;section id="projects" class="bg-gray-100 py-16"&#62;
+      &#60;div class="container mx-auto px-4"&#62;
+        &#60;h2 class="text-4xl font-bold text-center text-gray-800 mb-12"&#62;My Projects&#60;/h2&#62;
+        &#60;div class="grid grid-cols-1 md:grid-cols-3 gap-8"&#62;
+          &#60;!-- Project Card 1 --&#62;
+          &#60;div class="bg-white rounded-lg shadow-lg p-6"&#62;
+            &#60;h3 class="text-2xl font-bold text-gray-800 mb-3"&#62;Project 1&#60;/h3&#62;
+            &#60;p class="text-gray-600 mb-4"&#62;A simple website using HTML and Tailwind CSS.&#60;/p&#62;
+            &#60;button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"&#62;
+              View Project
+            &#60;/button&#62;
+          &#60;/div&#62;
 
-                    &lt;!-- Projects Section --&gt;
-                    &lt;section id="projects" class="bg-gray-100 py-16"&gt;
-                    &lt;div class="container mx-auto px-4"&gt;
-                    &lt;h2 class="text-4xl font-bold text-center text-gray-800 mb-12"&gt;My Projects&lt;/h2&gt;
+          &#60;!-- Project Card 2 --&#62;
+          &#60;div class="bg-white rounded-lg shadow-lg p-6"&#62;
+            &#60;h3 class="text-2xl font-bold text-gray-800 mb-3"&#62;Project 2&#60;/h3&#62;
+            &#60;p class="text-gray-600 mb-4"&#62;A responsive landing page with modern design.&#60;/p&#62;
+            &#60;button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"&#62;
+              View Project
+            &#60;/button&#62;
+          &#60;/div&#62;
 
-                    &lt;div class="grid grid-cols-1 md:grid-cols-3 gap-8"&gt;
-                    &lt;!-- Project Card 1 --&gt;
-                    &lt;div class="bg-white rounded-lg shadow-lg p-6"&gt;
-                    &lt;h3 class="text-2xl font-bold text-gray-800 mb-3"&gt;Project 1&lt;/h3&gt;
-                    &lt;p class="text-gray-600 mb-4"&gt;
-                    A simple website using HTML and Tailwind CSS.
-                    &lt;/p&gt;
-                    &lt;button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"&gt;
-                    View Project
-                    &lt;/button&gt;
-                    &lt;/div&gt;
+          &#60;!-- Project Card 3 --&#62;
+          &#60;div class="bg-white rounded-lg shadow-lg p-6"&#62;
+            &#60;h3 class="text-2xl font-bold text-gray-800 mb-3"&#62;Project 3&#60;/h3&#62;
+            &#60;p class="text-gray-600 mb-4"&#62;An interactive portfolio website.&#60;/p&#62;
+            &#60;button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"&#62;
+              View Project
+            &#60;/button&#62;
+          &#60;/div&#62;
+        &#60;/div&#62;
+      &#60;/div&#62;
+    &#60;/section&#62;
 
-                    &lt;!-- Project Card 2 --&gt;
-                    &lt;div class="bg-white rounded-lg shadow-lg p-6"&gt;
-                    &lt;h3 class="text-2xl font-bold text-gray-800 mb-3"&gt;Project 2&lt;/h3&gt;
-                    &lt;p class="text-gray-600 mb-4"&gt;
-                    A responsive landing page with modern design.
-                    &lt;/p&gt;
-                    &lt;button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"&gt;
-                    View Project
-                    &lt;/button&gt;
-                    &lt;/div&gt;
+    &#60;!-- Contact Section --&#62;
+    &#60;section id="contact" class="py-16"&#62;
+      &#60;div class="container mx-auto px-4 max-w-2xl"&#62;
+        &#60;h2 class="text-4xl font-bold text-center text-gray-800 mb-8"&#62;Contact Me&#60;/h2&#62;
+        &#60;div class="bg-white shadow-lg rounded-lg p-8"&#62;
+          &#60;p class="text-gray-600 text-center mb-6"&#62;
+            Feel free to reach out to me for any inquiries or collaborations!
+          &#60;/p&#62;
+          &#60;div class="text-center"&#62;
+            &#60;p class="text-gray-700 mb-2"&#62;Email: student@example.com&#60;/p&#62;
+            &#60;p class="text-gray-700"&#62;Phone: +91 12345 67890&#60;/p&#62;
+          &#60;/div&#62;
+        &#60;/div&#62;
+      &#60;/div&#62;
+    &#60;/section&#62;
 
-                    &lt;!-- Project Card 3 --&gt;
-                    &lt;div class="bg-white rounded-lg shadow-lg p-6"&gt;
-                    &lt;h3 class="text-2xl font-bold text-gray-800 mb-3"&gt;Project 3&lt;/h3&gt;
-                    &lt;p class="text-gray-600 mb-4"&gt;
-                    An interactive portfolio website.
-                    &lt;/p&gt;
-                    &lt;button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"&gt;
-                    View Project
-                    &lt;/button&gt;
-                    &lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;/section&gt;
-
-                    &lt;!-- Contact Section --&gt;
-                    &lt;section id="contact" class="py-16"&gt;
-                    &lt;div class="container mx-auto px-4 max-w-2xl"&gt;
-                    &lt;h2 class="text-4xl font-bold text-center text-gray-800 mb-8"&gt;Contact Me&lt;/h2&gt;
-                    &lt;div class="bg-white shadow-lg rounded-lg p-8"&gt;
-                    &lt;p class="text-gray-600 text-center mb-6"&gt;
-                    Feel free to reach out to me for any inquiries or collaborations!
-                    &lt;/p&gt;
-                    &lt;div class="text-center"&gt;
-                    &lt;p class="text-gray-700 mb-2"&gt;Email: student@example.com&lt;/p&gt;
-                    &lt;p class="text-gray-700"&gt;Phone: +91 12345 67890&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;/section&gt;
-
-                    &lt;!-- Footer --&gt;
-                    &lt;footer class="bg-gray-800 text-white py-8"&gt;
-                    &lt;div class="container mx-auto text-center"&gt;
-                    &lt;p&gt;&copy; 2024 My Portfolio. All rights reserved.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/footer&gt;
-
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-                <div class="mt-6 bg-green-50 border-l-4 border-green-500 p-4 rounded">
-                    <p class="text-green-700 font-semibold">💡 Try it yourself!</p>
-                    <p class="text-green-600">Copy the code above and save it as a .html file. Open it in your browser
-                        to see the complete website!</p>
-                </div>
+    &#60;!-- Footer --&#62;
+    &#60;footer class="bg-gray-800 text-white py-8"&#62;
+      &#60;div class="container mx-auto text-center"&#62;
+        &#60;p&#62;&#38;copy; 2024 My Portfolio. All rights reserved.&#60;/p&#62;
+      &#60;/div&#62;
+    &#60;/footer&#62;
+  &#60;/body&#62;
+&#60;/html&#62;
+                </code></pre>
             </section>
 
             <!-- Live Demo of Example Website -->
             <section class="section">
-                <div class="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-8 rounded-lg shadow-xl">
-                    <h2 class="text-3xl font-bold mb-4">🎨 Live Demo - Example Website</h2>
-                    <p class="text-lg mb-6">See the example website in action below:</p>
-                </div>
 
                 <div class="border-4 border-gray-300 rounded-lg overflow-hidden shadow-2xl">
                     <!-- Navigation -->
@@ -1162,38 +1180,9 @@
                     <!-- Footer -->
                     <footer class="bg-gray-800 text-white py-8">
                         <div class="container mx-auto text-center">
-                            <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+                            <p>&copy; 2025 My Portfolio. All rights reserved.</p>
                         </div>
                     </footer>
-                </div>
-            </section>
-
-            <!-- Practice Exercises -->
-            <section class="section bg-white p-8 rounded-lg shadow-md">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6">📝 Practice Exercises</h2>
-
-                <div class="space-y-4">
-                    <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
-                        <h3 class="text-lg font-semibold text-yellow-800 mb-2">Exercise 1: Create a Button</h3>
-                        <p class="text-yellow-700">Create a green button with white text that says "Click Me"</p>
-                    </div>
-
-                    <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
-                        <h3 class="text-lg font-semibold text-yellow-800 mb-2">Exercise 2: Create a Card</h3>
-                        <p class="text-yellow-700">Create a card with a title, description, and image (you can use a
-                            placeholder)</p>
-                    </div>
-
-                    <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
-                        <h3 class="text-lg font-semibold text-yellow-800 mb-2">Exercise 3: Create a Grid</h3>
-                        <p class="text-yellow-700">Create a 4-column grid with different colored boxes</p>
-                    </div>
-
-                    <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
-                        <h3 class="text-lg font-semibold text-yellow-800 mb-2">Exercise 4: Build Your Own Page</h3>
-                        <p class="text-yellow-700">Create a simple "About Me" page with your name, photo, hobbies, and
-                            favorite subjects</p>
-                    </div>
                 </div>
             </section>
 
@@ -1209,7 +1198,8 @@
                             </li>
                             <li>• <code class="bg-gray-200 px-2 py-1 rounded">bg-{color}-{shade}</code> - Background
                                 color</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">border-{color}-{shade}</code> - Border color</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">border-{color}-{shade}</code> - Border
+                                color</li>
                             <li>• Colors: blue, red, green, purple, yellow, gray, pink, indigo</li>
                             <li>• Shades: 50, 100-900 (lighter to darker)</li>
                         </ul>
@@ -1232,13 +1222,18 @@
                         <ul class="text-gray-700 space-y-1 text-sm">
                             <li>• <code class="bg-gray-200 px-2 py-1 rounded">text-{size}</code> - xs, sm, base, lg, xl,
                                 2xl, 3xl, 4xl, 5xl</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">font-{weight}</code> - thin, light, normal,
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">font-{weight}</code> - thin, light,
+                                normal,
                                 medium, semibold, bold, extrabold, black</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">text-{align}</code> - left, center, right, justify
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">text-{align}</code> - left, center, right,
+                                justify
                             </li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">uppercase</code> - Transform to uppercase</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">lowercase</code> - Transform to lowercase</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">capitalize</code> - Capitalize first letter</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">uppercase</code> - Transform to uppercase
+                            </li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">lowercase</code> - Transform to lowercase
+                            </li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">capitalize</code> - Capitalize first
+                                letter</li>
                         </ul>
                     </div>
 
@@ -1246,12 +1241,16 @@
                         <h3 class="text-xl font-bold text-gray-800 mb-3">Layout - Flexbox</h3>
                         <ul class="text-gray-700 space-y-1 text-sm">
                             <li>• <code class="bg-gray-200 px-2 py-1 rounded">flex</code> - Flexbox container</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">flex-row</code> - Horizontal direction</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">flex-row</code> - Horizontal direction
+                            </li>
                             <li>• <code class="bg-gray-200 px-2 py-1 rounded">flex-col</code> - Vertical direction</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">justify-{type}</code> - start, center, end, between, around, evenly</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">items-{type}</code> - start, center, end, stretch</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">justify-{type}</code> - start, center,
+                                end, between, around, evenly</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">items-{type}</code> - start, center, end,
+                                stretch</li>
                             <li>• <code class="bg-gray-200 px-2 py-1 rounded">flex-wrap</code> - Allow wrapping</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">gap-{size}</code> - Space between items</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">gap-{size}</code> - Space between items
+                            </li>
                         </ul>
                     </div>
 
@@ -1259,11 +1258,14 @@
                         <h3 class="text-xl font-bold text-gray-800 mb-3">Layout - Grid</h3>
                         <ul class="text-gray-700 space-y-1 text-sm">
                             <li>• <code class="bg-gray-200 px-2 py-1 rounded">grid</code> - Grid container</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">grid-cols-{n}</code> - Number of columns (1-12)</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">grid-cols-{n}</code> - Number of columns
+                                (1-12)</li>
                             <li>• <code class="bg-gray-200 px-2 py-1 rounded">grid-rows-{n}</code> - Number of rows</li>
                             <li>• <code class="bg-gray-200 px-2 py-1 rounded">gap-{size}</code> - Gap between cells</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">col-span-{n}</code> - Span across columns</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">row-span-{n}</code> - Span across rows</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">col-span-{n}</code> - Span across columns
+                            </li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">row-span-{n}</code> - Span across rows
+                            </li>
                         </ul>
                     </div>
 
@@ -1272,19 +1274,24 @@
                         <ul class="text-gray-700 space-y-1 text-sm">
                             <li>• <code class="bg-gray-200 px-2 py-1 rounded">border</code> - Add border (1px)</li>
                             <li>• <code class="bg-gray-200 px-2 py-1 rounded">border-{size}</code> - 0, 2, 4, 8</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">border-{side}</code> - t, r, b, l (top, right, bottom, left)</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">border-{side}</code> - t, r, b, l (top,
+                                right, bottom, left)</li>
                             <li>• <code class="bg-gray-200 px-2 py-1 rounded">rounded</code> - Small corners (4px)</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">rounded-{size}</code> - sm, md, lg, xl, 2xl, 3xl, full</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">rounded-{corner}</code> - tl, tr, bl, br</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">rounded-{size}</code> - sm, md, lg, xl,
+                                2xl, 3xl, full</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">rounded-{corner}</code> - tl, tr, bl, br
+                            </li>
                         </ul>
                     </div>
 
                     <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-pink-500">
                         <h3 class="text-xl font-bold text-gray-800 mb-3">Effects & Shadows</h3>
                         <ul class="text-gray-700 space-y-1 text-sm">
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">shadow-{size}</code> - sm, md, lg, xl, 2xl</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">shadow-{size}</code> - sm, md, lg, xl, 2xl
+                            </li>
                             <li>• <code class="bg-gray-200 px-2 py-1 rounded">shadow-none</code> - Remove shadow</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">opacity-{value}</code> - 0, 25, 50, 75, 100</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">opacity-{value}</code> - 0, 25, 50, 75,
+                                100</li>
                             <li>• <code class="bg-gray-200 px-2 py-1 rounded">blur-{size}</code> - sm, md, lg, xl</li>
                             <li>• <code class="bg-gray-200 px-2 py-1 rounded">brightness-{value}</code> - 0-200</li>
                         </ul>
@@ -1293,10 +1300,13 @@
                     <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-teal-500">
                         <h3 class="text-xl font-bold text-gray-800 mb-3">Width & Height</h3>
                         <ul class="text-gray-700 space-y-1 text-sm">
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">w-{size}</code> - Width (1-96, full, screen, auto)</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">h-{size}</code> - Height (1-96, full, screen, auto)</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">w-{size}</code> - Width (1-96, full,
+                                screen, auto)</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">h-{size}</code> - Height (1-96, full,
+                                screen, auto)</li>
                             <li>• <code class="bg-gray-200 px-2 py-1 rounded">min-w-{size}</code> - Minimum width</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">max-w-{size}</code> - Maximum width (xs, sm, md, lg, xl, 2xl-7xl)</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">max-w-{size}</code> - Maximum width (xs,
+                                sm, md, lg, xl, 2xl-7xl)</li>
                             <li>• <code class="bg-gray-200 px-2 py-1 rounded">min-h-{size}</code> - Minimum height</li>
                             <li>• <code class="bg-gray-200 px-2 py-1 rounded">max-h-{size}</code> - Maximum height</li>
                         </ul>
@@ -1305,12 +1315,18 @@
                     <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-orange-500">
                         <h3 class="text-xl font-bold text-gray-800 mb-3">Hover & Interactive</h3>
                         <ul class="text-gray-700 space-y-1 text-sm">
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">hover:bg-{color}</code> - Hover background</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">hover:text-{color}</code> - Hover text color</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">hover:scale-{value}</code> - 95, 100, 105, 110</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">cursor-pointer</code> - Pointer cursor</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">transition</code> - Smooth transitions</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">duration-{time}</code> - 150, 200, 300, 500, 700, 1000</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">hover:bg-{color}</code> - Hover background
+                            </li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">hover:text-{color}</code> - Hover text
+                                color</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">hover:scale-{value}</code> - 95, 100, 105,
+                                110</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">cursor-pointer</code> - Pointer cursor
+                            </li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">transition</code> - Smooth transitions
+                            </li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">duration-{time}</code> - 150, 200, 300,
+                                500, 700, 1000</li>
                         </ul>
                     </div>
 
@@ -1330,12 +1346,18 @@
                     <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-lime-500">
                         <h3 class="text-xl font-bold text-gray-800 mb-3">Overflow & Z-Index</h3>
                         <ul class="text-gray-700 space-y-1 text-sm">
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">overflow-hidden</code> - Hide overflow</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">overflow-auto</code> - Auto scrollbars</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">overflow-scroll</code> - Always scrollbars</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">overflow-x-{type}</code> - Horizontal overflow</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">overflow-y-{type}</code> - Vertical overflow</li>
-                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">z-{value}</code> - 0, 10, 20, 30, 40, 50</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">overflow-hidden</code> - Hide overflow
+                            </li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">overflow-auto</code> - Auto scrollbars
+                            </li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">overflow-scroll</code> - Always scrollbars
+                            </li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">overflow-x-{type}</code> - Horizontal
+                                overflow</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">overflow-y-{type}</code> - Vertical
+                                overflow</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">z-{value}</code> - 0, 10, 20, 30, 40, 50
+                            </li>
                         </ul>
                     </div>
 
@@ -1346,15 +1368,18 @@
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-gray-700">
                         <div>
                             <p class="font-semibold text-purple-700 mb-2">🎨 Color Consistency</p>
-                            <p class="text-sm">Stick to a color palette. Use shades 100-200 for backgrounds, 500-600 for primary colors, 700-900 for text.</p>
+                            <p class="text-sm">Stick to a color palette. Use shades 100-200 for backgrounds, 500-600 for
+                                primary colors, 700-900 for text.</p>
                         </div>
                         <div>
                             <p class="font-semibold text-green-700 mb-2">🔄 Combine Classes</p>
-                            <p class="text-sm">Tailwind works by combining utilities. Don't be afraid to use many classes on one element!</p>
+                            <p class="text-sm">Tailwind works by combining utilities. Don't be afraid to use many
+                                classes on one element!</p>
                         </div>
                         <div>
                             <p class="font-semibold text-red-700 mb-2">⚡ Performance</p>
-                            <p class="text-sm">In production, use Tailwind's purge feature to remove unused classes and keep file sizes small.</p>
+                            <p class="text-sm">In production, use Tailwind's purge feature to remove unused classes and
+                                keep file sizes small.</p>
                         </div>
                     </div>
                 </div>
@@ -1415,7 +1440,6 @@
 
         </div>
 
-        <!-- Footer -->
         <footer class="bg-gray-800 text-white py-8 mt-12">
             <div class="container mx-auto text-center">
                 <p class="text-lg mb-2">Happy Coding! 💻</p>
@@ -1423,7 +1447,7 @@
             </div>
         </footer>
 
-    <script src="js/prism.js"></script>
+        <script src="js/prism.js"></script>
     </body>
 
 </html>
