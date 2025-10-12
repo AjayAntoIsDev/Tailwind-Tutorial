@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tailwind CSS Tutorial</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="css/prism.css">
+        <style>
+            .section {
+                margin-bottom: 3rem;
+            }
+            
+            pre[class*="language-"] {
+                margin: 1rem 0;
+                border-radius: 0.5rem;
+            }
+            
+            code[class*="language-"] {
+                font-size: 0.9rem;
+            }
+        </style>
+    </head>
+
+    <body class="bg-gray-50">
+        <div class="container mx-auto px-4 py-8 max-w-6xl">
+
+            <!-- Introduction -->
+            <section class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Tailwind CSS!</h2>
+                <p class="text-gray-700 text-lg mb-4">
+                    Tailwind CSS is a utility-first CSS framework that lets you build beautiful websites quickly without
+                    writing custom CSS.
+                    Instead of writing CSS files, you add classes directly to your HTML elements!
+                </p>
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+                    <p class="text-blue-700"><strong>What you'll learn:</strong> HTML basics recap, Tailwind classes,
+                        layouts, components, and build a complete website!</p>
+                </div>
+            </section>
+
+            <!-- HTML Tags Recap -->
+            <section class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">HTML Tags - Quick Recap </h2>
+
+                <div class="space-y-4">
+                    <div class="border-l-4 border-green-500 pl-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">&lt;div&gt; - Division/Container</h3>
+                        <p class="text-gray-600">Used to group and organize content. It's a block-level element.</p>
+                        <pre><code class="language-html">&lt;div&gt;This is a container&lt;/div&gt;</code></pre>
+                    </div>
+
+                    <div class="border-l-4 border-green-500 pl-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">&lt;h1&gt; to &lt;h6&gt; - Headings</h3>
+                        <p class="text-gray-600">Heading tags from largest (h1) to smallest (h6).</p>
+                        <pre><code class="language-html">&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Sub Heading&lt;/h2&gt;</code></pre>
+                    </div>
+
+                    <div class="border-l-4 border-green-500 pl-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">&lt;p&gt; - Paragraph</h3>
+                        <p class="text-gray-600">Used for text content and paragraphs.</p>
+                        <pre><code class="language-html">&lt;p&gt;This is a paragraph of text.&lt;/p&gt;</code></pre>
+                    </div>
+
+                    <div class="border-l-4 border-green-500 pl-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">&lt;a&gt; - Anchor/Link</h3>
+                        <p class="text-gray-600">Creates clickable links to other pages or sections.</p>
+                        <pre><code class="language-html">&lt;a href="https://example.com"&gt;Click here&lt;/a&gt;</code></pre>
+                    </div>
+
+                    <div class="border-l-4 border-green-500 pl-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">&lt;img&gt; - Image</h3>
+                        <p class="text-gray-600">Displays images. It's a self-closing tag.</p>
+                        <pre><code class="language-html">&lt;img src="image.jpg" alt="Description"&gt;</code></pre>
+                    </div>
+
+                    <div class="border-l-4 border-green-500 pl-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">&lt;button&gt; - Button</h3>
+                        <p class="text-gray-600">Creates clickable buttons.</p>
+                        <pre><code class="language-html">&lt;button&gt;Click Me&lt;/button&gt;</code></pre>
+                    </div>
+
+                    <div class="border-l-4 border-green-500 pl-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">&lt;nav&gt; - Navigation</h3>
+                        <p class="text-gray-600">Contains navigation links for the website.</p>
+                        <pre><code class="language-html">&lt;nav&gt;Navigation menu goes here&lt;/nav&gt;</code></pre>
+                    </div>
+
+                    <div class="border-l-4 border-green-500 pl-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">&lt;section&gt; - Section</h3>
+                        <p class="text-gray-600">Defines a section in a document.</p>
+                        <pre><code class="language-html">&lt;section&gt;Content section&lt;/section&gt;</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Getting Started with Tailwind -->
+            <section class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">To use Tailwind CSS</h2>
+                <pre><code class="language-html">&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</code></pre>
+                <p class="text-gray-600 mt-4 text-sm">That's it! Now you can use all Tailwind classes in your HTML.</p>
+            </section>
+
+            <!-- Colors -->
+            <section class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">1️⃣ Colors in Tailwind</h2>
+
+                <h3 class="text-2xl font-semibold text-gray-700 mb-4">Text Colors</h3>
+                <p class="text-gray-600 mb-4">Use <code
+                        class="bg-gray-200 px-2 py-1 rounded">text-{color}-{shade}</code> to change text color:</p>
+
+                <pre><code class="language-html">&lt;p class="text-blue-500"&gt;Blue text&lt;/p&gt;
+&lt;p class="text-red-600"&gt;Red text&lt;/p&gt;
+&lt;p class="text-green-700"&gt;Green text&lt;/p&gt;</code></pre>
+
+                <div class="bg-gray-100 p-6 rounded-lg mb-6">
+                    <p class="font-semibold mb-2">Result:</p>
+                    <p class="text-blue-500">Blue text</p>
+                    <p class="text-red-600">Red text</p>
+                    <p class="text-green-700">Green text</p>
+                </div>
+
+                <h3 class="text-2xl font-semibold text-gray-700 mb-4">Background Colors</h3>
+                <p class="text-gray-600 mb-4">Use <code class="bg-gray-200 px-2 py-1 rounded">bg-{color}-{shade}</code>
+                    to change background color:</p>
+
+                <pre><code class="language-html">&lt;div class="bg-blue-100 p-4"&gt;Light blue background&lt;/div&gt;
+&lt;div class="bg-purple-200 p-4"&gt;Purple background&lt;/div&gt;
+&lt;div class="bg-yellow-300 p-4"&gt;Yellow background&lt;/div&gt;</code></pre>
+
+                <div class="space-y-2">
+                    <p class="font-semibold mb-2">Result:</p>
+                    <div class="bg-blue-100 p-4 rounded">Light blue background</div>
+                    <div class="bg-purple-200 p-4 rounded">Purple background</div>
+                    <div class="bg-yellow-300 p-4 rounded">Yellow background</div>
+                </div>
+            </section>
+
+            <!-- Spacing -->
+            <section class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">2️⃣ Spacing (Padding & Margin)</h2>
+
+                <h3 class="text-2xl font-semibold text-gray-700 mb-4">Padding</h3>
+                <p class="text-gray-600 mb-4">Padding adds space <strong>inside</strong> an element:</p>
+
+                <pre><code class="language-html">&lt;div class="p-4"&gt;Padding on all sides&lt;/div&gt;
+&lt;div class="px-6"&gt;Padding left and right only&lt;/div&gt;
+&lt;div class="py-8"&gt;Padding top and bottom only&lt;/div&gt;
+&lt;div class="pt-4 pb-2"&gt;Different padding top and bottom&lt;/div&gt;</code></pre>
+
+                <div class="space-y-2 mb-6">
+                    <p class="font-semibold mb-2">Result:</p>
+                    <div class="bg-blue-100 p-4 inline-block rounded">Padding on all sides (p-4)</div><br>
+                    <div class="bg-green-100 px-6 inline-block rounded">Padding left and right (px-6)</div><br>
+                    <div class="bg-purple-100 py-8 inline-block rounded">Padding top and bottom (py-8)</div>
+                </div>
+
+                <h3 class="text-2xl font-semibold text-gray-700 mb-4">Margin</h3>
+                <p class="text-gray-600 mb-4">Margin adds space <strong>outside</strong> an element:</p>
+
+                <pre><code class="language-html">&lt;div class="m-4"&gt;Margin on all sides&lt;/div&gt;
+&lt;div class="mx-auto"&gt;Center element horizontally&lt;/div&gt;
+&lt;div class="mt-8"&gt;Margin top only&lt;/div&gt;</code></pre>
+
+                <div class="bg-gray-100 p-4 rounded">
+                    <p class="font-semibold mb-2">Common spacing values:</p>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li><code class="bg-gray-200 px-2 py-1 rounded">p-2</code> = 0.5rem (8px)</li>
+                        <li><code class="bg-gray-200 px-2 py-1 rounded">p-4</code> = 1rem (16px)</li>
+                        <li><code class="bg-gray-200 px-2 py-1 rounded">p-6</code> = 1.5rem (24px)</li>
+                        <li><code class="bg-gray-200 px-2 py-1 rounded">p-8</code> = 2rem (32px)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Typography -->
+            <section class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">3️⃣ Typography (Text Styling)</h2>
+
+                <h3 class="text-2xl font-semibold text-gray-700 mb-4">Font Size</h3>
+                <pre><code class="language-html">&lt;p class="text-xs"&gt;Extra small text&lt;/p&gt;
+&lt;p class="text-sm"&gt;Small text&lt;/p&gt;
+&lt;p class="text-base"&gt;Normal text&lt;/p&gt;
+&lt;p class="text-lg"&gt;Large text&lt;/p&gt;
+&lt;p class="text-xl"&gt;Extra large text&lt;/p&gt;
+&lt;p class="text-2xl"&gt;2X large text&lt;/p&gt;
+&lt;p class="text-3xl"&gt;3X large text&lt;/p&gt;</code></pre>
+
+                <div class="bg-gray-100 p-6 rounded-lg mb-6">
+                    <p class="font-semibold mb-2">Result:</p>
+                    <p class="text-xs">Extra small text</p>
+                    <p class="text-sm">Small text</p>
+                    <p class="text-base">Normal text</p>
+                    <p class="text-lg">Large text</p>
+                    <p class="text-xl">Extra large text</p>
+                    <p class="text-2xl">2X large text</p>
+                    <p class="text-3xl">3X large text</p>
+                </div>
+
+                <h3 class="text-2xl font-semibold text-gray-700 mb-4">Font Weight</h3>
+                <pre><code class="language-html">&lt;p class="font-light"&gt;Light weight&lt;/p&gt;
+&lt;p class="font-normal"&gt;Normal weight&lt;/p&gt;
+&lt;p class="font-semibold"&gt;Semibold weight&lt;/p&gt;
+&lt;p class="font-bold"&gt;Bold weight&lt;/p&gt;</code></pre>
+
+                <div class="bg-gray-100 p-6 rounded-lg mb-6">
+                    <p class="font-semibold mb-2">Result:</p>
+                    <p class="font-light">Light weight</p>
+                    <p class="font-normal">Normal weight</p>
+                    <p class="font-semibold">Semibold weight</p>
+                    <p class="font-bold">Bold weight</p>
+                </div>
+
+                <h3 class="text-2xl font-semibold text-gray-700 mb-4">Text Alignment</h3>
+                <pre><code class="language-html">&lt;p class="text-left"&gt;Left aligned&lt;/p&gt;
+&lt;p class="text-center"&gt;Center aligned&lt;/p&gt;
+&lt;p class="text-right"&gt;Right aligned&lt;/p&gt;</code></pre>
+
+                <div class="bg-gray-100 p-6 rounded-lg">
+                    <p class="font-semibold mb-2">Result:</p>
+                    <p class="text-left">Left aligned</p>
+                    <p class="text-center">Center aligned</p>
+                    <p class="text-right">Right aligned</p>
+                </div>
+            </section>
+
+            <!-- Borders and Rounded Corners -->
+            <section class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">4️⃣ Borders & Rounded Corners</h2>
+
+                <pre><code class="language-html">&lt;div class="border"&gt;Simple border&lt;/div&gt;
+&lt;div class="border-2"&gt;Thicker border&lt;/div&gt;
+&lt;div class="border-4 border-blue-500"&gt;Blue thick border&lt;/div&gt;
+&lt;div class="rounded"&gt;Small rounded corners&lt;/div&gt;
+&lt;div class="rounded-lg"&gt;Large rounded corners&lt;/div&gt;
+&lt;div class="rounded-full"&gt;Fully rounded (pill shape)&lt;/div&gt;</code></pre>
+
+                <div class="space-y-4 bg-gray-100 p-6 rounded-lg">
+                    <p class="font-semibold mb-2">Result:</p>
+                    <div class="border p-4 bg-white">Simple border</div>
+                    <div class="border-2 p-4 bg-white">Thicker border</div>
+                    <div class="border-4 border-blue-500 p-4 bg-white">Blue thick border</div>
+                    <div class="rounded p-4 bg-white border">Small rounded corners</div>
+                    <div class="rounded-lg p-4 bg-white border">Large rounded corners</div>
+                    <div class="rounded-full p-4 bg-white border inline-block">Fully rounded</div>
+                </div>
+            </section>
+
+            <!-- Shadows -->
+            <section class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">5️⃣ Shadows</h2>
+
+                <pre><code class="language-html">&lt;div class="shadow-sm"&gt;Small shadow&lt;/div&gt;
+&lt;div class="shadow"&gt;Normal shadow&lt;/div&gt;
+&lt;div class="shadow-md"&gt;Medium shadow&lt;/div&gt;
+&lt;div class="shadow-lg"&gt;Large shadow&lt;/div&gt;
+&lt;div class="shadow-xl"&gt;Extra large shadow&lt;/div&gt;</code></pre>
+
+                <div class="space-y-6 bg-gray-100 p-6 rounded-lg">
+                    <p class="font-semibold mb-2">Result:</p>
+                    <div class="shadow-sm p-4 bg-white rounded">Small shadow</div>
+                    <div class="shadow p-4 bg-white rounded">Normal shadow</div>
+                    <div class="shadow-md p-4 bg-white rounded">Medium shadow</div>
+                    <div class="shadow-lg p-4 bg-white rounded">Large shadow</div>
+                    <div class="shadow-xl p-4 bg-white rounded">Extra large shadow</div>
+                </div>
+            </section>
+
+            <!-- Flexbox Layout -->
+            <section class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">6️⃣ Layouts - Flexbox</h2>
+
+                <p class="text-gray-600 mb-4">Flexbox helps arrange items in rows or columns easily!</p>
+
+                <h3 class="text-2xl font-semibold text-gray-700 mb-4">Horizontal Layout (Row)</h3>
+                <pre><code class="language-html">&lt;div class="flex space-x-4"&gt;
+  &lt;div class="bg-blue-500 text-white p-4"&gt;Item 1&lt;/div&gt;
+  &lt;div class="bg-green-500 text-white p-4"&gt;Item 2&lt;/div&gt;
+  &lt;div class="bg-purple-500 text-white p-4"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                <div class="bg-gray-100 p-6 rounded-lg mb-6">
+                    <p class="font-semibold mb-2">Result:</p>
+                    <div class="flex space-x-4">
+                        <div class="bg-blue-500 text-white p-4 rounded">Item 1</div>
+                        <div class="bg-green-500 text-white p-4 rounded">Item 2</div>
+                        <div class="bg-purple-500 text-white p-4 rounded">Item 3</div>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-semibold text-gray-700 mb-4">Center Items</h3>
+                <pre><code class="language-html">&lt;div class="flex justify-center items-center h-32 bg-gray-200"&gt;
+  &lt;div class="bg-red-500 text-white p-4"&gt;Centered!&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                <div class="bg-gray-100 p-6 rounded-lg mb-6">
+                    <p class="font-semibold mb-2">Result:</p>
+                    <div class="flex justify-center items-center h-32 bg-gray-200 rounded">
+                        <div class="bg-red-500 text-white p-4 rounded">Centered!</div>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-semibold text-gray-700 mb-4">Space Between Items</h3>
+                <pre><code class="language-html">&lt;div class="flex justify-between bg-gray-200 p-4"&gt;
+  &lt;div class="bg-blue-500 text-white p-4"&gt;Left&lt;/div&gt;
+  &lt;div class="bg-green-500 text-white p-4"&gt;Middle&lt;/div&gt;
+  &lt;div class="bg-purple-500 text-white p-4"&gt;Right&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                <div class="bg-gray-100 p-6 rounded-lg">
+                    <p class="font-semibold mb-2">Result:</p>
+                    <div class="flex justify-between bg-gray-200 p-4 rounded">
+                        <div class="bg-blue-500 text-white p-4 rounded">Left</div>
+                        <div class="bg-green-500 text-white p-4 rounded">Middle</div>
+                        <div class="bg-purple-500 text-white p-4 rounded">Right</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Grid Layout -->
+            <section class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">7️⃣ Layouts - Grid</h2>
+
+                <p class="text-gray-600 mb-4">Grid helps create responsive column layouts!</p>
+
+                <h3 class="text-2xl font-semibold text-gray-700 mb-4">2 Column Grid</h3>
+                <pre><code class="language-html">&lt;div class="grid grid-cols-2 gap-4"&gt;
+  &lt;div class="bg-blue-500 text-white p-4"&gt;Column 1&lt;/div&gt;
+  &lt;div class="bg-green-500 text-white p-4"&gt;Column 2&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                <div class="bg-gray-100 p-6 rounded-lg mb-6">
+                    <p class="font-semibold mb-2">Result:</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-blue-500 text-white p-4 rounded">Column 1</div>
+                        <div class="bg-green-500 text-white p-4 rounded">Column 2</div>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-semibold text-gray-700 mb-4">3 Column Grid</h3>
+                <pre><code class="language-html">&lt;div class="grid grid-cols-3 gap-4"&gt;
+  &lt;div class="bg-red-500 text-white p-4"&gt;Card 1&lt;/div&gt;
+  &lt;div class="bg-yellow-500 text-white p-4"&gt;Card 2&lt;/div&gt;
+  &lt;div class="bg-purple-500 text-white p-4"&gt;Card 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                <div class="bg-gray-100 p-6 rounded-lg">
+                    <p class="font-semibold mb-2">Result:</p>
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="bg-red-500 text-white p-4 rounded">Card 1</div>
+                        <div class="bg-yellow-500 text-white p-4 rounded">Card 2</div>
+                        <div class="bg-purple-500 text-white p-4 rounded">Card 3</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Components: Buttons -->
+            <section class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">8️⃣ Component: Buttons</h2>
+
+                <pre><code class="language-html">&lt;!-- Primary Button --&gt;
+&lt;button class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600"&gt;
+  Primary Button
+&lt;/button&gt;
+
+&lt;!-- Success Button --&gt;
+&lt;button class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600"&gt;
+  Success Button
+&lt;/button&gt;
+
+&lt;!-- Danger Button --&gt;
+&lt;button class="bg-red-500 text-white px-6 py-3 rounded-full hover:bg-red-600"&gt;
+  Danger Button
+&lt;/button&gt;
+
+&lt;!-- Outline Button --&gt;
+&lt;button class="border-2 border-purple-500 text-purple-500 px-6 py-2 rounded hover:bg-purple-500 hover:text-white"&gt;
+  Outline Button
+&lt;/button&gt;</code></pre>
+
+                <div class="bg-gray-100 p-6 rounded-lg">
+                    <p class="font-semibold mb-4">Result:</p>
+                    <div class="flex flex-wrap gap-4">
+                        <button class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">Primary
+                            Button</button>
+                        <button class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600">Success
+                            Button</button>
+                        <button class="bg-red-500 text-white px-6 py-3 rounded-full hover:bg-red-600">Danger
+                            Button</button>
+                        <button
+                            class="border-2 border-purple-500 text-purple-500 px-6 py-2 rounded hover:bg-purple-500 hover:text-white">Outline
+                            Button</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Components: Cards -->
+            <section class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">9️⃣ Component: Cards</h2>
+
+                <pre><code class="language-html">&lt;div class="bg-white shadow-lg rounded-lg p-6 max-w-sm"&gt;
+  &lt;h3 class="text-xl font-bold text-gray-800 mb-2"&gt;Card Title&lt;/h3&gt;
+  &lt;p class="text-gray-600 mb-4"&gt;
+    This is a simple card component with a title, description, and button.
+  &lt;/p&gt;
+  &lt;button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"&gt;
+    Learn More
+  &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+                <div class="bg-gray-100 p-6 rounded-lg">
+                    <p class="font-semibold mb-4">Result:</p>
+                    <div class="bg-white shadow-lg rounded-lg p-6 max-w-sm">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Card Title</h3>
+                        <p class="text-gray-600 mb-4">
+                            This is a simple card component with a title, description, and button.
+                        </p>
+                        <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Learn More</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Components: Navigation Bar -->
+            <section class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">🔟 Component: Navigation Bar</h2>
+
+                <pre><code class="language-html">&lt;nav class="bg-blue-600 text-white p-4"&gt;
+  &lt;div class="container mx-auto flex justify-between items-center"&gt;
+    &lt;div class="text-xl font-bold"&gt;My Website&lt;/div&gt;
+    &lt;div class="space-x-6"&gt;
+      &lt;a href="#" class="hover:text-blue-200"&gt;Home&lt;/a&gt;
+      &lt;a href="#" class="hover:text-blue-200"&gt;About&lt;/a&gt;
+      &lt;a href="#" class="hover:text-blue-200"&gt;Services&lt;/a&gt;
+      &lt;a href="#" class="hover:text-blue-200"&gt;Contact&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+
+                <div class="bg-gray-100 p-6 rounded-lg">
+                    <p class="font-semibold mb-4">Result:</p>
+                    <nav class="bg-blue-600 text-white p-4 rounded">
+                        <div class="container mx-auto flex justify-between items-center">
+                            <div class="text-xl font-bold">My Website</div>
+                            <div class="space-x-6">
+                                <a href="#" class="hover:text-blue-200">Home</a>
+                                <a href="#" class="hover:text-blue-200">About</a>
+                                <a href="#" class="hover:text-blue-200">Services</a>
+                                <a href="#" class="hover:text-blue-200">Contact</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </section>
+
+            <!-- Components: Form -->
+            <section class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">1️⃣1️⃣ Component: Contact Form</h2>
+
+                <pre><code class="language-html">&lt;div class="bg-white shadow-md rounded-lg p-8 max-w-md mx-auto"&gt;
+  &lt;h2 class="text-2xl font-bold text-gray-800 mb-6"&gt;Contact Us&lt;/h2&gt;
+  
+  &lt;form&gt;
+    &lt;!-- Name Input --&gt;
+    &lt;div class="mb-4"&gt;
+      &lt;label class="block text-gray-700 font-semibold mb-2"&gt;Name&lt;/label&gt;
+      &lt;input type="text" 
+             class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" 
+             placeholder="Enter your name"&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Email Input --&gt;
+    &lt;div class="mb-4"&gt;
+      &lt;label class="block text-gray-700 font-semibold mb-2"&gt;Email&lt;/label&gt;
+      &lt;input type="email" 
+             class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" 
+             placeholder="Enter your email"&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Message Textarea --&gt;
+    &lt;div class="mb-4"&gt;
+      &lt;label class="block text-gray-700 font-semibold mb-2"&gt;Message&lt;/label&gt;
+      &lt;textarea 
+        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 h-32" 
+        placeholder="Enter your message"&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Select Dropdown --&gt;
+    &lt;div class="mb-6"&gt;
+      &lt;label class="block text-gray-700 font-semibold mb-2"&gt;Subject&lt;/label&gt;
+      &lt;select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"&gt;
+        &lt;option&gt;General Inquiry&lt;/option&gt;
+        &lt;option&gt;Support&lt;/option&gt;
+        &lt;option&gt;Feedback&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Submit Button --&gt;
+    &lt;button type="submit" 
+            class="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition"&gt;
+      Send Message
+    &lt;/button&gt;
+  &lt;/form&gt;
+&lt;/div&gt;</code></pre>
+
+                <div class="bg-gray-100 p-6 rounded-lg">
+                    <p class="font-semibold mb-4">Result:</p>
+                    <div class="bg-white shadow-md rounded-lg p-8 max-w-md mx-auto">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">Contact Us</h2>
+                        
+                        <form>
+                            <!-- Name Input -->
+                            <div class="mb-4">
+                                <label class="block text-gray-700 font-semibold mb-2">Name</label>
+                                <input type="text" 
+                                       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" 
+                                       placeholder="Enter your name">
+                            </div>
+
+                            <!-- Email Input -->
+                            <div class="mb-4">
+                                <label class="block text-gray-700 font-semibold mb-2">Email</label>
+                                <input type="email" 
+                                       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" 
+                                       placeholder="Enter your email">
+                            </div>
+
+                            <!-- Message Textarea -->
+                            <div class="mb-4">
+                                <label class="block text-gray-700 font-semibold mb-2">Message</label>
+                                <textarea 
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 h-32" 
+                                    placeholder="Enter your message"></textarea>
+                            </div>
+
+                            <!-- Select Dropdown -->
+                            <div class="mb-6">
+                                <label class="block text-gray-700 font-semibold mb-2">Subject</label>
+                                <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                                    <option>General Inquiry</option>
+                                    <option>Support</option>
+                                    <option>Feedback</option>
+                                </select>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" 
+                                    class="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="mt-6 bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+                    <p class="text-blue-700 font-semibold">💡 Form Styling Tips:</p>
+                    <ul class="text-blue-600 mt-2 space-y-1">
+                        <li>• Use <code class="bg-blue-100 px-2 py-1 rounded">w-full</code> to make inputs full width</li>
+                        <li>• <code class="bg-blue-100 px-2 py-1 rounded">focus:outline-none</code> removes default outline</li>
+                        <li>• <code class="bg-blue-100 px-2 py-1 rounded">focus:border-blue-500</code> adds color on focus</li>
+                        <li>• <code class="bg-blue-100 px-2 py-1 rounded">block</code> makes labels display above inputs</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Complete Example Website -->
+            <section class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">🎯 Complete Example Website</h2>
+
+                <p class="text-gray-600 mb-4">Here's a complete, simple website combining everything we learned:</p>
+
+                <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title&gt;My Portfolio&lt;/title&gt;
+                    &lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;
+                    &lt;/head&gt;
+                    &lt;body class="bg-gray-50"&gt;
+
+                    &lt;!-- Navigation --&gt;
+                    &lt;nav class="bg-blue-600 text-white p-4 shadow-lg"&gt;
+                    &lt;div class="container mx-auto flex justify-between items-center"&gt;
+                    &lt;div class="text-2xl font-bold"&gt;My Portfolio&lt;/div&gt;
+                    &lt;div class="space-x-6"&gt;
+                    &lt;a href="#home" class="hover:text-blue-200"&gt;Home&lt;/a&gt;
+                    &lt;a href="#about" class="hover:text-blue-200"&gt;About&lt;/a&gt;
+                    &lt;a href="#projects" class="hover:text-blue-200"&gt;Projects&lt;/a&gt;
+                    &lt;a href="#contact" class="hover:text-blue-200"&gt;Contact&lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;/nav&gt;
+
+                    &lt;!-- Hero Section --&gt;
+                    &lt;section id="home" class="bg-blue-500 text-white py-20"&gt;
+                    &lt;div class="container mx-auto text-center"&gt;
+                    &lt;h1 class="text-5xl font-bold mb-4"&gt;Welcome to My Portfolio&lt;/h1&gt;
+                    &lt;p class="text-xl mb-8"&gt;I'm a student learning web development&lt;/p&gt;
+                    &lt;button class="bg-white text-blue-500 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50"&gt;
+                    View My Work
+                    &lt;/button&gt;
+                    &lt;/div&gt;
+                    &lt;/section&gt;
+
+                    &lt;!-- About Section --&gt;
+                    &lt;section id="about" class="py-16"&gt;
+                    &lt;div class="container mx-auto px-4"&gt;
+                    &lt;h2 class="text-4xl font-bold text-center text-gray-800 mb-8"&gt;About Me&lt;/h2&gt;
+                    &lt;div class="max-w-2xl mx-auto text-center"&gt;
+                    &lt;p class="text-gray-600 text-lg mb-4"&gt;
+                    I'm a Class 11th student passionate about web development and design.
+                    I love creating beautiful and functional websites using modern technologies.
+                    &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;/section&gt;
+
+                    &lt;!-- Projects Section --&gt;
+                    &lt;section id="projects" class="bg-gray-100 py-16"&gt;
+                    &lt;div class="container mx-auto px-4"&gt;
+                    &lt;h2 class="text-4xl font-bold text-center text-gray-800 mb-12"&gt;My Projects&lt;/h2&gt;
+
+                    &lt;div class="grid grid-cols-1 md:grid-cols-3 gap-8"&gt;
+                    &lt;!-- Project Card 1 --&gt;
+                    &lt;div class="bg-white rounded-lg shadow-lg p-6"&gt;
+                    &lt;h3 class="text-2xl font-bold text-gray-800 mb-3"&gt;Project 1&lt;/h3&gt;
+                    &lt;p class="text-gray-600 mb-4"&gt;
+                    A simple website using HTML and Tailwind CSS.
+                    &lt;/p&gt;
+                    &lt;button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"&gt;
+                    View Project
+                    &lt;/button&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Project Card 2 --&gt;
+                    &lt;div class="bg-white rounded-lg shadow-lg p-6"&gt;
+                    &lt;h3 class="text-2xl font-bold text-gray-800 mb-3"&gt;Project 2&lt;/h3&gt;
+                    &lt;p class="text-gray-600 mb-4"&gt;
+                    A responsive landing page with modern design.
+                    &lt;/p&gt;
+                    &lt;button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"&gt;
+                    View Project
+                    &lt;/button&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Project Card 3 --&gt;
+                    &lt;div class="bg-white rounded-lg shadow-lg p-6"&gt;
+                    &lt;h3 class="text-2xl font-bold text-gray-800 mb-3"&gt;Project 3&lt;/h3&gt;
+                    &lt;p class="text-gray-600 mb-4"&gt;
+                    An interactive portfolio website.
+                    &lt;/p&gt;
+                    &lt;button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"&gt;
+                    View Project
+                    &lt;/button&gt;
+                    &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;/section&gt;
+
+                    &lt;!-- Contact Section --&gt;
+                    &lt;section id="contact" class="py-16"&gt;
+                    &lt;div class="container mx-auto px-4 max-w-2xl"&gt;
+                    &lt;h2 class="text-4xl font-bold text-center text-gray-800 mb-8"&gt;Contact Me&lt;/h2&gt;
+                    &lt;div class="bg-white shadow-lg rounded-lg p-8"&gt;
+                    &lt;p class="text-gray-600 text-center mb-6"&gt;
+                    Feel free to reach out to me for any inquiries or collaborations!
+                    &lt;/p&gt;
+                    &lt;div class="text-center"&gt;
+                    &lt;p class="text-gray-700 mb-2"&gt;Email: student@example.com&lt;/p&gt;
+                    &lt;p class="text-gray-700"&gt;Phone: +91 12345 67890&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;/section&gt;
+
+                    &lt;!-- Footer --&gt;
+                    &lt;footer class="bg-gray-800 text-white py-8"&gt;
+                    &lt;div class="container mx-auto text-center"&gt;
+                    &lt;p&gt;&copy; 2024 My Portfolio. All rights reserved.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;/footer&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+                <div class="mt-6 bg-green-50 border-l-4 border-green-500 p-4 rounded">
+                    <p class="text-green-700 font-semibold">💡 Try it yourself!</p>
+                    <p class="text-green-600">Copy the code above and save it as a .html file. Open it in your browser
+                        to see the complete website!</p>
+                </div>
+            </section>
+
+            <!-- Live Demo of Example Website -->
+            <section class="section">
+                <div class="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-8 rounded-lg shadow-xl">
+                    <h2 class="text-3xl font-bold mb-4">🎨 Live Demo - Example Website</h2>
+                    <p class="text-lg mb-6">See the example website in action below:</p>
+                </div>
+
+                <div class="border-4 border-gray-300 rounded-lg overflow-hidden shadow-2xl">
+                    <!-- Navigation -->
+                    <nav class="bg-blue-600 text-white p-4 shadow-lg">
+                        <div class="container mx-auto flex justify-between items-center">
+                            <div class="text-2xl font-bold">My Portfolio</div>
+                            <div class="space-x-6">
+                                <a href="#demo-home" class="hover:text-blue-200">Home</a>
+                                <a href="#demo-about" class="hover:text-blue-200">About</a>
+                                <a href="#demo-projects" class="hover:text-blue-200">Projects</a>
+                                <a href="#demo-contact" class="hover:text-blue-200">Contact</a>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <!-- Hero Section -->
+                    <section id="demo-home" class="bg-blue-500 text-white py-20">
+                        <div class="container mx-auto text-center px-4">
+                            <h1 class="text-5xl font-bold mb-4">Welcome to My Portfolio</h1>
+                            <p class="text-xl mb-8">I'm a student learning web development</p>
+                            <button class="bg-white text-blue-500 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50">
+                                View My Work
+                            </button>
+                        </div>
+                    </section>
+
+                    <!-- About Section -->
+                    <section id="demo-about" class="py-16 bg-white">
+                        <div class="container mx-auto px-4">
+                            <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">About Me</h2>
+                            <div class="max-w-2xl mx-auto text-center">
+                                <p class="text-gray-600 text-lg mb-4">
+                                    I'm a Class 11th student passionate about web development and design.
+                                    I love creating beautiful and functional websites using modern technologies.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Projects Section -->
+                    <section id="demo-projects" class="bg-gray-100 py-16">
+                        <div class="container mx-auto px-4">
+                            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">My Projects</h2>
+
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                                <!-- Project Card 1 -->
+                                <div class="bg-white rounded-lg shadow-lg p-6">
+                                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Project 1</h3>
+                                    <p class="text-gray-600 mb-4">
+                                        A simple website using HTML and Tailwind CSS.
+                                    </p>
+                                    <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                                        View Project
+                                    </button>
+                                </div>
+
+                                <!-- Project Card 2 -->
+                                <div class="bg-white rounded-lg shadow-lg p-6">
+                                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Project 2</h3>
+                                    <p class="text-gray-600 mb-4">
+                                        A responsive landing page with modern design.
+                                    </p>
+                                    <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                                        View Project
+                                    </button>
+                                </div>
+
+                                <!-- Project Card 3 -->
+                                <div class="bg-white rounded-lg shadow-lg p-6">
+                                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Project 3</h3>
+                                    <p class="text-gray-600 mb-4">
+                                        An interactive portfolio website.
+                                    </p>
+                                    <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                                        View Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Contact Section -->
+                    <section id="demo-contact" class="py-16 bg-white">
+                        <div class="container mx-auto px-4 max-w-2xl">
+                            <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">Contact Me</h2>
+                            <div class="bg-white shadow-lg rounded-lg p-8 border">
+                                <p class="text-gray-600 text-center mb-6">
+                                    Feel free to reach out to me for any inquiries or collaborations!
+                                </p>
+                                <div class="text-center">
+                                    <p class="text-gray-700 mb-2">Email: student@example.com</p>
+                                    <p class="text-gray-700">Phone: +91 12345 67890</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Footer -->
+                    <footer class="bg-gray-800 text-white py-8">
+                        <div class="container mx-auto text-center">
+                            <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+                        </div>
+                    </footer>
+                </div>
+            </section>
+
+            <!-- Practice Exercises -->
+            <section class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">📝 Practice Exercises</h2>
+
+                <div class="space-y-4">
+                    <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
+                        <h3 class="text-lg font-semibold text-yellow-800 mb-2">Exercise 1: Create a Button</h3>
+                        <p class="text-yellow-700">Create a green button with white text that says "Click Me"</p>
+                    </div>
+
+                    <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
+                        <h3 class="text-lg font-semibold text-yellow-800 mb-2">Exercise 2: Create a Card</h3>
+                        <p class="text-yellow-700">Create a card with a title, description, and image (you can use a
+                            placeholder)</p>
+                    </div>
+
+                    <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
+                        <h3 class="text-lg font-semibold text-yellow-800 mb-2">Exercise 3: Create a Grid</h3>
+                        <p class="text-yellow-700">Create a 4-column grid with different colored boxes</p>
+                    </div>
+
+                    <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
+                        <h3 class="text-lg font-semibold text-yellow-800 mb-2">Exercise 4: Build Your Own Page</h3>
+                        <p class="text-yellow-700">Create a simple "About Me" page with your name, photo, hobbies, and
+                            favorite subjects</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Reference -->
+            <section class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">📖 Quick Reference Guide</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Colors</h3>
+                        <ul class="text-gray-700 space-y-1">
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">text-{color}-{shade}</code> - Text color
+                            </li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">bg-{color}-{shade}</code> - Background
+                                color</li>
+                            <li>• Colors: blue, red, green, purple, yellow, gray</li>
+                            <li>• Shades: 100-900 (lighter to darker)</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Spacing</h3>
+                        <ul class="text-gray-700 space-y-1">
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">p-{size}</code> - Padding all sides</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">px-{size}</code> - Padding left/right</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">py-{size}</code> - Padding top/bottom</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">m-{size}</code> - Margin (same pattern)
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Text</h3>
+                        <ul class="text-gray-700 space-y-1">
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">text-{size}</code> - xs, sm, base, lg, xl,
+                                2xl, 3xl</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">font-{weight}</code> - light, normal,
+                                semibold, bold</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">text-{align}</code> - left, center, right
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Layout</h3>
+                        <ul class="text-gray-700 space-y-1">
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">flex</code> - Flexbox container</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">grid grid-cols-{n}</code> - Grid layout
+                            </li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">justify-{type}</code> - center, between,
+                                around</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">items-center</code> - Vertical center</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Borders & Corners</h3>
+                        <ul class="text-gray-700 space-y-1">
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">border</code> - Add border</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">border-{size}</code> - 2, 4, 8</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">rounded</code> - Small corners</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">rounded-{size}</code> - lg, xl, full</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Effects</h3>
+                        <ul class="text-gray-700 space-y-1">
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">shadow-{size}</code> - sm, md, lg, xl</li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">hover:bg-{color}</code> - Hover effect
+                            </li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">opacity-{value}</code> - 0-100</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tips for Success -->
+            <section class="section bg-gradient-to-r from-blue-500 to-purple-600 text-white p-8 rounded-lg shadow-xl">
+                <h2 class="text-3xl font-bold mb-6">💡 Tips for Success</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white bg-opacity-20 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold mb-3">🎯 Start Simple</h3>
+                        <p>Begin with basic elements like buttons and cards before moving to complex layouts.</p>
+                    </div>
+
+                    <div class="bg-white bg-opacity-20 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold mb-3">🔍 Experiment</h3>
+                        <p>Try different class combinations to see what works best for your design.</p>
+                    </div>
+
+                    <div class="bg-white bg-opacity-20 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold mb-3">📚 Use Documentation</h3>
+                        <p>Visit tailwindcss.com for complete documentation and more examples.</p>
+                    </div>
+
+                    <div class="bg-white bg-opacity-20 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold mb-3">🎨 Be Creative</h3>
+                        <p>Use colors and spacing to create your unique style and personality.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Conclusion -->
+            <section class="section bg-white p-8 rounded-lg shadow-md text-center">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">🎉 Congratulations!</h2>
+                <p class="text-xl text-gray-700 mb-6">
+                    You've completed the Tailwind CSS tutorial! You now know how to create beautiful websites using
+                    Tailwind CSS.
+                </p>
+                <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded text-left max-w-2xl mx-auto">
+                    <h3 class="text-2xl font-bold text-green-800 mb-3">What's Next?</h3>
+                    <ul class="text-green-700 space-y-2">
+                        <li>✓ Practice by building your own portfolio website</li>
+                        <li>✓ Try creating a landing page for a fictional product</li>
+                        <li>✓ Experiment with responsive design (mobile-friendly layouts)</li>
+                        <li>✓ Learn JavaScript to make your websites interactive</li>
+                        <li>✓ Explore advanced Tailwind features like animations and transitions</li>
+                    </ul>
+                </div>
+
+                <div class="mt-8">
+                    <button
+                        class="bg-blue-500 text-white px-8 py-4 rounded-lg text-xl font-semibold hover:bg-blue-600 shadow-lg">
+                        Start Building Your Website! 🚀
+                    </button>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white py-8 mt-12">
+            <div class="container mx-auto text-center">
+                <p class="text-lg mb-2">Happy Coding! 💻</p>
+                <p class="text-gray-400">Made with ❤️ using Tailwind CSS</p>
+            </div>
+        </footer>
+
+    <script src="js/prism.js"></script>
+    </body>
+
+</html>
