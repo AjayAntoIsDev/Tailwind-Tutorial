@@ -5,6 +5,26 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tailwind CSS Tutorial</title>
+        <meta name="description" content="Learn Tailwind CSS from scratch with this comprehensive tutorial. Includes HTML basics, forms, layouts, components, and real-world examples. Perfect for beginners!">
+        <meta name="keywords" content="Tailwind CSS, CSS framework, web development tutorial, responsive design, HTML tutorial, CSS tutorial, beginner web development, Tailwind components">
+        <meta name="author" content="Tailwind Tutorial">
+        <meta name="robots" content="index, follow">
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://tailwind.ajayanto.me/">
+        <meta property="og:title" content="Tailwind CSS Tutorial - Complete Beginner's Guide">
+        <meta property="og:description" content="Learn Tailwind CSS from scratch with this comprehensive tutorial. Includes HTML basics, forms, layouts, and real-world examples.">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://tailwind.ajayanto.me/">
+        <meta property="twitter:title" content="Tailwind CSS Tutorial - Complete Beginner's Guide">
+        <meta property="twitter:description" content="Learn Tailwind CSS from scratch with this comprehensive tutorial. Includes HTML basics, forms, layouts, and real-world examples.">
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://tailwind.ajayanto.me/">
+        
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="css/prism.css">
         <style>
@@ -36,11 +56,14 @@
     </head>
 
     <body class="bg-gray-50">
+        <!-- Skip to main content for accessibility -->
+        <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50">Skip to main content</a>
+        
         <div class="container mx-auto px-4 py-8 max-w-6xl">
 
             <!-- Introduction -->
-            <section class="section bg-white p-8 rounded-lg shadow-md">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Tailwind CSS!</h2>
+            <section id="main-content" class="section bg-white p-8 rounded-lg shadow-md">
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">Tailwind CSS Tutorial</h1>
                 <p class="text-gray-700 text-lg mb-4">
                     Tailwind CSS is a utility-first CSS framework that lets you build beautiful websites quickly without
                     writing custom CSS.
@@ -53,7 +76,7 @@
             </section>
 
             <!-- HTML Tags Recap -->
-            <section class="section bg-white p-8 rounded-lg shadow-md">
+            <section id="html-tags" class="section bg-white p-8 rounded-lg shadow-md">
                 <h2 class="text-3xl font-bold text-gray-800 mb-6">HTML Tags - Quick Recap 📌</h2>
 
                 <div class="space-y-6">
@@ -161,7 +184,7 @@
             </section>
 
             <!-- Form Tags Recap -->
-            <section class="section bg-white p-8 rounded-lg shadow-md">
+            <section id="form-tags" class="section bg-white p-8 rounded-lg shadow-md">
                 <h2 class="text-3xl font-bold text-gray-800 mb-6">Form Tags - Quick Recap 📝</h2>
 
                 <div class="space-y-6">
@@ -362,15 +385,15 @@
             </section>
 
             <!-- Getting Started with Tailwind -->
-            <section class="section bg-white p-8 rounded-lg shadow-md">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6">To use Tailwind CSS</h2>
+            <section id="getting-started" class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Getting Started with Tailwind CSS</h2>
                 <pre><code class="language-html">&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</code></pre>
                 <p class="text-gray-600 mt-4 text-sm">That's it! Now you can use all Tailwind classes in your HTML.</p>
             </section>
 
             <!-- Colors -->
-            <section class="section bg-white p-8 rounded-lg shadow-md">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6">1️⃣ Colors in Tailwind</h2>
+            <section id="colors" class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">1. Colors in Tailwind CSS</h2>
 
                 <h3 class="text-2xl font-semibold text-gray-700 mb-4">Text Colors</h3>
                 <p class="text-gray-600 mb-4">Use <code
@@ -404,8 +427,8 @@
             </section>
 
             <!-- Typography -->
-            <section class="section bg-white p-8 rounded-lg shadow-md">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6">2️⃣ Typography (Text Styling)</h2>
+            <section id="typography" class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">2. Typography (Text Styling)</h2>
 
                 <h3 class="text-2xl font-semibold text-gray-700 mb-4">Font Size</h3>
                 <pre><code class="language-html">&lt;p class="text-xs"&gt;Extra small text&lt;/p&gt;
@@ -455,8 +478,8 @@
             </section>
 
             <!-- Spacing -->
-            <section class="section bg-white p-8 rounded-lg shadow-md">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6">3️⃣Spacing (Padding & Margin)</h2>
+            <section id="spacing" class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">3. Spacing (Padding & Margin)</h2>
 
                 <h3 class="text-2xl font-semibold text-gray-700 mb-4">Padding</h3>
                 <p class="text-gray-600 mb-4">Padding adds space <strong>inside</strong> an element:</p>
@@ -492,8 +515,8 @@
             </section>
 
             <!-- Borders and Rounded Corners -->
-            <section class="section bg-white p-8 rounded-lg shadow-md">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6">4️⃣ Borders & Rounded Corners</h2>
+            <section id="borders" class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">4. Borders & Rounded Corners</h2>
 
                 <pre><code class="language-html">&lt;div class="border"&gt;Simple border&lt;/div&gt;
 &lt;div class="border-2"&gt;Thicker border&lt;/div&gt;
@@ -514,8 +537,8 @@
             </section>
 
             <!-- Shadows -->
-            <section class="section bg-white p-8 rounded-lg shadow-md">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6">5️⃣ Shadows</h2>
+            <section id="shadows" class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">5. Shadows</h2>
 
                 <pre><code class="language-html">&lt;div class="shadow-sm"&gt;Small shadow&lt;/div&gt;
 &lt;div class="shadow"&gt;Normal shadow&lt;/div&gt;
@@ -534,8 +557,8 @@
             </section>
 
             <!-- Hover Effects and Cursors -->
-            <section class="section bg-white p-8 rounded-lg shadow-md">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6">5️⃣.5️⃣ Hover Effects & Cursors</h2>
+            <section id="hover-effects" class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">6. Hover Effects & Cursors</h2>
 
                 <h3 class="text-2xl font-semibold text-gray-700 mb-4">Hover Effects</h3>
                 <p class="text-gray-600 mb-4">Add interactive effects when users hover over elements using the <code
@@ -663,8 +686,8 @@
             </section>
 
             <!-- Flexbox Layout -->
-            <section class="section bg-white p-8 rounded-lg shadow-md">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6">6️⃣ Layouts - Flexbox</h2>
+            <section id="flexbox" class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">7. Layouts - Flexbox</h2>
 
                 <p class="text-gray-600 mb-4">Flexbox helps arrange items in rows or columns easily!</p>
 
@@ -714,8 +737,8 @@
             </section>
 
             <!-- Grid Layout -->
-            <section class="section bg-white p-8 rounded-lg shadow-md">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6">7️⃣ Layouts - Grid</h2>
+            <section id="grid" class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">8. Layouts - Grid</h2>
 
                 <p class="text-gray-600 mb-4">Grid helps create responsive column layouts!</p>
 
@@ -751,8 +774,8 @@
             </section>
 
             <!-- Components: Buttons -->
-            <section class="section bg-white p-8 rounded-lg shadow-md">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6">8️⃣ Component: Buttons</h2>
+            <section id="buttons" class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">9. Component: Buttons</h2>
 
                 <pre><code class="language-html">&lt;!-- Primary Button --&gt;
 &lt;button class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600"&gt;
@@ -791,8 +814,8 @@
             </section>
 
             <!-- Components: Cards -->
-            <section class="section bg-white p-8 rounded-lg shadow-md">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6">9️⃣ Component: Cards</h2>
+            <section id="cards" class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">10. Component: Cards</h2>
 
                 <pre><code class="language-html">&lt;div class="bg-white shadow-lg rounded-lg p-6 max-w-sm"&gt;
   &lt;h3 class="text-xl font-bold text-gray-800 mb-2"&gt;Card Title&lt;/h3&gt;
@@ -817,8 +840,8 @@
             </section>
 
             <!-- Components: Navigation Bar -->
-            <section class="section bg-white p-8 rounded-lg shadow-md">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6">🔟 Component: Navigation Bar</h2>
+            <section id="navigation" class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">11. Component: Navigation Bar</h2>
 
                 <pre><code class="language-html">&lt;nav class="bg-blue-600 text-white p-4"&gt;
   &lt;div class="container mx-auto flex justify-between items-center"&gt;
@@ -849,8 +872,8 @@
             </section>
 
             <!-- Components: Form -->
-            <section class="section bg-white p-8 rounded-lg shadow-md">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6">1️⃣1️⃣ Component: Contact Form</h2>
+            <section id="forms" class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">12. Component: Contact Form</h2>
 
                 <pre><code class="language-html">&lt;div class="bg-white shadow-md rounded-lg p-8 max-w-md mx-auto"&gt;
   &lt;h2 class="text-2xl font-bold text-gray-800 mb-6"&gt;Contact Us&lt;/h2&gt;
@@ -964,12 +987,12 @@
             </section>
 
             <!-- Complete Example Website -->
-            <section class="section bg-white p-8 rounded-lg shadow-md">
+            <section id="example" class="section bg-white p-8 rounded-lg shadow-md">
                 <h2 class="text-3xl font-bold text-gray-800 mb-6">🎯 Complete Example Website</h2>
 
                 <p class="text-gray-600 mb-4">Here's a complete, simple website combining everything we learned:</p>
 
-                <pre><code class="language-html">
+                <pre class="hidden"><code class="language-html ">
 &#60;!DOCTYPE html&#62;
 &#60;html lang="en"&#62;
   &#60;head&#62;
@@ -1187,7 +1210,7 @@
             </section>
 
             <!-- Quick Reference -->
-            <section class="section bg-white p-8 rounded-lg shadow-md">
+            <section id="reference" class="section bg-white p-8 rounded-lg shadow-md">
                 <h2 class="text-3xl font-bold text-gray-800 mb-6">📖 Quick Reference Guide</h2>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -1444,10 +1467,37 @@
             <div class="container mx-auto text-center">
                 <p class="text-lg mb-2">Happy Coding! 💻</p>
                 <p class="text-gray-400">Made with ❤️ using Tailwind CSS</p>
+                <nav aria-label="Footer navigation" class="mt-4">
+                    <ul class="flex justify-center space-x-4 text-sm">
+                        <li><a href="#main-content" class="hover:text-blue-400">Top</a></li>
+                        <li><a href="#getting-started" class="hover:text-blue-400">Getting Started</a></li>
+                        <li><a href="#reference" class="hover:text-blue-400">Reference</a></li>
+                    </ul>
+                </nav>
             </div>
         </footer>
 
         <script src="js/prism.js"></script>
+        
+        <!-- Schema.org structured data for SEO -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "TechArticle",
+          "headline": "Tailwind CSS Tutorial - Complete Beginner's Guide",
+          "description": "Learn Tailwind CSS from scratch with this comprehensive tutorial. Includes HTML basics, forms, layouts, components, and real-world examples.",
+          "author": {
+            "@type": "Person",
+            "name": "Tailwind Tutorial"
+          },
+          "datePublished": "2024-01-01",
+          "dateModified": "2025-10-12",
+          "educationalLevel": "Beginner",
+          "proficiencyLevel": "Beginner",
+          "keywords": "Tailwind CSS, CSS framework, web development, tutorial",
+          "articleSection": "Web Development"
+        }
+        </script>
     </body>
 
 </html>
